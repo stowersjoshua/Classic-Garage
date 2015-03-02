@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212031553) do
+ActiveRecord::Schema.define(version: 20150212203708) do
+
+  create_table "menuitems", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "price"
+    t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "name"
+    t.string   "user"
+    t.integer  "order"
+    t.boolean  "approved"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,33 @@
+<h3>Photos from the Classic Garage!</h3>
+<h4>app/views/visitors/photo.html.erb</h4>
+
+
+
+<% @photos.each do |f| %>
+    Name: <%= f.name %>
+    <br />
+    Order: <%= f.order %>
+    <br />
+    File name: <%= f.image_file_name %>
+    <br />
+    <hr />
+    Photo:
+    <img style="height: 300px;" src="<%= f.image.url %>" />
+    <br />
+<% end %>
+
+
+
+
+<%= link_to 'Upload your own!', new_photo_path %>
+
+
+
+
+
+
+
+
+
+<!--Show all images here-->
+<!--Include link to image upload page-->

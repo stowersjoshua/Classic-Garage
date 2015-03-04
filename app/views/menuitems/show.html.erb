@@ -19,6 +19,9 @@
   <strong>Order:</strong>
   <%= @menuitem.order %>
 </p>
-
+<p>
+  Photo:
+  <%= image_tag @menuitem.image.url %>
+</p>
 <%= link_to 'Edit', edit_menuitem_path(@menuitem) %> |
 <%= link_to 'Back', menuitems_path %>

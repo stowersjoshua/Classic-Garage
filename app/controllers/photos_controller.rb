@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   respond_to :html
 
   def index
-    @photos = Photo.all
+    @photos = Photo.approved_items
     respond_with(@photos)
   end
 

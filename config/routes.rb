@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   get "photo" => "visitors#photo"
   get "contact" => "visitors#contact"
+  get "admin/photos" => "admin#approve_photos"
 
 end

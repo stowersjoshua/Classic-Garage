@@ -1,0 +1,18 @@
+<h1>This is where you approve photos as an admin!</h1>
+Things to have here:
+    See list of photos
+        Remove button
+        Approve button
+        Set order #
+
+<% @photos.each do |f| %>
+    <div class="box" style="width:400px; border: solid; border-color: #000000; border-width: 3px; padding:10px; margin: 10px;">
+        ID: <%= f.id %><br />
+        Name: <%= f.name %><br />
+        Size: <%= f.size_in_meg %><br />
+        Type: <%= f.image_content_type %><br />
+        Order: <%= f.order %><br />
+        Image: <img style="max-height: 200px;" src="<%= f.image.url %>" /><!--Set image as link to full size image-->
+    </div>
+    <hr />
+<% end %>

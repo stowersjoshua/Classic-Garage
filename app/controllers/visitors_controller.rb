@@ -1,5 +1,9 @@
 class VisitorsController < ApplicationController
 
+  def index
+    @menu_items = Menuitem.all.order(order: :asc)
+  end
+
   def photo
     @photos = Photo.approved_items
     @photo = Photo.new

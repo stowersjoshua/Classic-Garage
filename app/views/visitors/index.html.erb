@@ -1,16 +1,26 @@
-<h3>Welcome to the Classic Garage!</h3>
-<h4>Visitors#Index</h4>
-<h4>app/views/visitors/index.html.erb</h4>
+<h3 style="text-align: center">Welcome to the Classic Garage!</h3>
+<h4 style="text-align: center">Find me at: <b>app/views/visitors/index.html.erb</b></h4>
 
 
 
 
 
 
+<hr />
 <!--Insert each menu item here-->
+<% @menu_items.each do |f| %>
+    <div class="menu-item-box" style="width:400px; border-style: solid; border-width: 2px; padding:10px; margin: 10px; float: left;">
+        Name: <%= f.name %><br />
+        Category: <%= f.category %><br />
+        Description: <%= f.description %><br />
+        Image: <img src="<%= f.image.url %>" style="max-width:250px;" />
+    </div>
+<% end %>
 
 
 
+
+<h4 style="clear: both; margin-top:60px;">Go to /menu to add/remove menu items.</h4><!--This is a temporary arrangement, soon it will be in the admin panel. -->
 
 
 

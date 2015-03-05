@@ -44,7 +44,7 @@ GEM
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.5)
+    cocaine (0.5.7)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -54,7 +54,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
-    daemon_controller (1.2.0)
     debug_inspector (0.0.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
@@ -72,7 +71,7 @@ GEM
     high_voltage (2.2.1)
     hike (1.2.3)
     i18n (0.7.0)
-    jbuilder (2.2.8)
+    jbuilder (2.2.9)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
@@ -83,15 +82,14 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.5.1)
-    multi_json (1.10.1)
+    multi_json (1.11.0)
     orm_adapter (0.5.0)
     paperclip (4.2.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    passenger (4.0.59)
-      daemon_controller (>= 1.2.0)
+    passenger (5.0.1)
       rack
       rake (>= 0.8.1)
     rack (1.5.2)

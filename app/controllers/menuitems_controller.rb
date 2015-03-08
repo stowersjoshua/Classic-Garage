@@ -8,6 +8,10 @@ class MenuitemsController < ApplicationController
     respond_with(@menuitems)
   end
 
+  def admin
+    @menuitem = Menuitem.new
+  end
+
   def show
     respond_with(@menuitem)
   end

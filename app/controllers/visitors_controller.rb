@@ -10,7 +10,7 @@ class VisitorsController < ApplicationController
   end
 
   def contact
-
+    #I don't anticipate needing anything here.
   end
 
   def create

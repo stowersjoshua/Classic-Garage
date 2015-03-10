@@ -11,12 +11,29 @@
 
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main" id="primary-content">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+  <main role="main" id="primary-content">
+    <div class="pagecontent row">
+        <div class="mynav col-xs-3">
+            <div class="mynavbar">
+              <p>Hi</p><br /><h1>This is</h1>
+            </div>
+        </div>
+
+        <div class="col-xs-9 maincontent">
+          <%= yield %>
+        </div>
+
+    </div><!--End row-->
+  </main>
   </body>
 </html>
+
+
+
+
+
+
+<%#= render 'layouts/messages' %>
+<!--<header>-->
+<!--<%#= render 'layouts/navigation' %>-->
+<!--</header>-->

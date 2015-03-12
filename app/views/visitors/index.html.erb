@@ -10,14 +10,19 @@
 <!--Insert each menu item here-->
 <div id="wrapper">
   <div id="columns">
-    <% @menu_items.each do |f| %>
-        <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
-          <p>Name: <%= f.name %></p><br />
-          <p>Category: <%= f.category %></p><br />
-          <p>Description: <%= f.description %></p><br />
-          <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;" /></p>
-        </div>
+    <% 6.times do |x| %>
+        <h1><%= catcount_to_cat(x) %></h1>
+        <% @menu_items.where(category: x.to_s).each do |f| %>
+            <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
+              <p>Name: <%= f.name %></p><br />
+              <p>Category: <%= f.category %></p><br />
+              <p>Description: <%= f.description %></p><br />
+              <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;" /></p>
+            </div>
+        <% end %>
+        <hr />
     <% end %>
+
   </div>
 </div>
 
@@ -27,5 +32,7 @@
 
 
 
-<!--Please don't delete this. <3-->
+<!--Please, don't delete this. <3-->
 <!--<%#= link_to 'Users:', users_path %> <%#= User.count %>-->
+
+

@@ -12,9 +12,9 @@
 
   <% 6.times do |x| %>
       <h1 class="categoryname"><%= catcount_to_cat(x) %></h1>
-      <div class="columns" style="background-color: blue;">
+      <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px; background-color: green;">
+            <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
               <p>Name: <%= f.name %></p><br/>
               <p>Category: <%= f.category %></p><br/>
               <p>Description: <%= f.description %></p><br/>

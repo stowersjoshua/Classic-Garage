@@ -6,29 +6,38 @@
 
 
 
-<hr />
+<hr/>
 <!--Insert each menu item here-->
 <div id="wrapper">
-  <div id="columns">
-    <% 6.times do |x| %>
-        <h1><%= catcount_to_cat(x) %></h1>
+
+  <% 6.times do |x| %>
+      <h1><%= catcount_to_cat(x) %></h1>
+
+      <div class="columns">
+
+
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
-              <p>Name: <%= f.name %></p><br />
-              <p>Category: <%= f.category %></p><br />
-              <p>Description: <%= f.description %></p><br />
-              <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;" /></p>
+              <p>Name: <%= f.name %></p><br/>
+
+              <p>Category: <%= f.category %></p><br/>
+
+              <p>Description: <%= f.description %></p><br/>
+
+              <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;"/></p>
             </div>
         <% end %>
-        <hr />
-    <% end %>
+      </div>
+      <hr />
+  <% end %>
 
-  </div>
+
 </div>
 
 
 
-<h4 style="clear: both; margin-top:60px;">Go to /menu to add/remove menu items.</h4><!--This is a temporary arrangement, soon it will be in the admin panel. -->
+<h4 style="clear: both; margin-top:60px;">Go to /menu to add/remove menu
+  items.</h4><!--This is a temporary arrangement, soon it will be in the admin panel. -->
 
 
 

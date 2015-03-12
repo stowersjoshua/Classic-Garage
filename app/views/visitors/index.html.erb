@@ -8,15 +8,17 @@
 
 <hr />
 <!--Insert each menu item here-->
-<div class="row">
-<% @menu_items.each do |f| %>
-    <div class="menu-item-box col-md-3" style="border-style: solid; border-width: 2px; padding:10px;">
-        Name: <%= f.name %><br />
-        Category: <%= f.category %><br />
-        Description: <%= f.description %><br />
-        Image: <img src="<%= f.image.url %>" style="max-width:250px;" />
-    </div>
-<% end %>
+<div id="wrapper">
+  <div id="columns">
+    <% @menu_items.each do |f| %>
+        <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
+          <p>Name: <%= f.name %></p><br />
+          <p>Category: <%= f.category %></p><br />
+          <p>Description: <%= f.description %></p><br />
+          <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;" /></p>
+        </div>
+    <% end %>
+  </div>
 </div>
 
 

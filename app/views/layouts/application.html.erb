@@ -14,8 +14,13 @@
   <main role="main" id="primary-content">
     <div class="pagecontent row">
         <div class="mynav col-xs-3">
-            <div class="mynavbar">
-              <p>Hi</p><br /><h1>This is</h1>
+          <div class="mynavbar">
+            <% if @home_banner %>
+                <h2>The truth never bothered me anyways!</h2>
+            <% else %>
+                <h2>You can't handle the truth!</h2>
+            <% end %>
+
             </div>
         </div>
 

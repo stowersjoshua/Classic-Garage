@@ -1,10 +1,4 @@
-<h3 style="text-align: center">Welcome to the Classic Garage!</h3>
-<h4 style="text-align: center">Find me at: <b>app/views/visitors/index.html.erb</b></h4>
-
-
-
-
-
+<h2>MAKE MENU FOR MENU HERE</h2>
 
 <hr/>
 <!--Insert each menu item here-->
@@ -12,7 +6,7 @@
 
   <% 5.times do |x| %>
       <% x = x + 1 %>
-      <h1 class="categoryname"><%= catcount_to_cat(x) %></h1>
+      <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
       <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
@@ -26,13 +20,6 @@
       <hr />
   <% end %>
 </div>
-
-
-
-<h4 style="clear: both; margin-top:60px;">Go to /menu to add/remove menu
-  items.</h4><!--This is a temporary arrangement, soon it will be in the admin panel. -->
-
-
 
 <!--Please, don't delete this. <3-->
 <!--<%#= link_to 'Users:', users_path %> <%#= User.count %>-->

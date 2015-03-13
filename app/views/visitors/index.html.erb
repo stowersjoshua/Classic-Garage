@@ -1,16 +1,5 @@
-<script>
-    function gothere() {
-        $('#cat-4').ScrollTo({
-            duration: 2000,
-            easing: 'linear'
-        });
-    }
-</script>
-
-
 <div>
     <ul class="nav navbar-nav">
-      <li ><a onclick="gothere()">go</a></li>
       <li class="active"><a href="#cat-1">Home</a></li>
       <li ><a href="#cat-2">home</a></li>
       <li><a href="#cat-3">new</a></li>
@@ -20,7 +9,7 @@
 </div>
 <br/>
 <hr/>
-<!--Insert each menu item here-->
+<!--nsert each menu item here-->
 <div id="wrapper">
 
   <% 5.times do |x| %>
@@ -39,7 +28,7 @@
       <hr />
   <% end %>
 </div>
-
+<div id="bottom">This is the bottom of the page</div>
 <!--Please, don't delete this. <3-->
 <!--<%#= link_to 'Users:', users_path %> <%#= User.count %>-->
 

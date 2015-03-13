@@ -1,5 +1,24 @@
-<h2>MAKE MENU FOR MENU HERE</h2>
+<script>
+    function gothere() {
+        $('#cat-4').ScrollTo({
+            duration: 2000,
+            easing: 'linear'
+        });
+    }
+</script>
 
+
+<div>
+    <ul class="nav navbar-nav">
+      <li ><a onclick="gothere()">go</a></li>
+      <li class="active"><a href="#cat-1">Home</a></li>
+      <li ><a href="#cat-2">home</a></li>
+      <li><a href="#cat-3">new</a></li>
+      <li><a href="#cat-4">about</a></li>
+      <li><a href="#cat-5">other</a></li>
+    </ul>
+</div>
+<br/>
 <hr/>
 <!--Insert each menu item here-->
 <div id="wrapper">
@@ -9,7 +28,7 @@
       <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
       <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
+            <div id="<%= "cat-" + f.category %>" class="menu-item-box" style="border-style: solid; border-width: 2px; padding:10px;">
               <p>Name: <%= f.name %></p><br/>
               <p>Category: <%= f.category %></p><br/>
               <p>Description: <%= f.description %></p><br/>

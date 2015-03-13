@@ -93,3 +93,89 @@
     column-count: 5;
   }
 }
+
+$x: 100vw;
+
+#circlebig {
+  width: $x/8;
+  height: $x/8;
+  background: yellow;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+#circle {
+  width: $x/10;
+  height: $x/10;
+  background: red;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: -45%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+#rectangle {
+  width: $x/40;
+  height: $x/40;
+  background: blue;
+  position: relative;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#trapezoid {
+  border-top: $x/20 solid red;
+  border-left: $x/100 solid transparent;
+  border-right: $x/100 solid transparent;
+  height: 0px;
+  width: $x/8;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rectanglesmall1 {
+  width: $x/50;
+  height: $x/25;
+  background: blue;
+  position: relative;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+  right: 10%;
+}
+
+#rectanglesmall2 {
+  width: $x/50;
+  height: $x/25;
+  background: blue;
+  position: relative;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -$x/25;
+  left: 10%;
+}
+
+#rectanglebig {
+  width: 200px;
+  height: 100px;
+  background: red;
+}
+
+#trapezoidbig {
+  border-bottom: 100px solid red;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 100px;
+}

@@ -5,7 +5,6 @@
 }
 
 .mynavbar {
-  background-color: #666666;
   height: 100vh;
   width: inherit;
   position: fixed;
@@ -96,6 +95,14 @@
 
 $x: 100vw;
 
+#cover {
+  z-index: -2;
+  background-color: #fff;
+  position: relative;
+  height: 100vh;
+  margin-top: -100vh;
+}
+
 #circlebig {
   width: $x/8;
   height: $x/8;
@@ -152,6 +159,7 @@ $x: 100vw;
   margin-left: auto;
   margin-right: auto;
   right: 10%;
+  margin-top: -1vw;
 }
 
 #rectanglesmall2 {
@@ -167,15 +175,25 @@ $x: 100vw;
 }
 
 #rectanglebig {
-  width: 200px;
-  height: 100px;
+  width: 80%;
+  height: 200vh;
   background: red;
+  margin-top: -100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: -3;
 }
 
 #trapezoidbig {
-  border-bottom: 100px solid red;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-bottom: $x/25 solid blue;
+  border-left: $x/150 solid transparent;
+  border-right: $x/150 solid transparent;
   height: 0;
-  width: 100px;
+  width: $x/4.5;
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: $x/75;
+//  left: $x/25;
 }

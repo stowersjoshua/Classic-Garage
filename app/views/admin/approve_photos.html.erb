@@ -5,7 +5,9 @@ Things to have here:
         Approve button
         Set order #
 
-<% @photos.each do |f| %>
+
+<h2>Unapproved photos:</h2>
+<% @new_photos.each do |f| %>
     <div class="box" style="width:400px; border: solid; border-color: #000000; border-width: 3px; padding:10px; margin: 10px;">
         ID: <%= f.id %><br />
         Name: <%= f.name %><br />
@@ -13,9 +15,30 @@ Things to have here:
         Type: <%= f.image_content_type %><br />
         Order: <%= f.order %><br />
         Image: <img style="max-height: 200px;" src="<%= f.image.url %>" /><!--Set image as link to full size image-->
+        Delete image: <%= link_to "Delete photo", photo_path(f), method: :delete, data: {confirm: "Are you sure you wish to delete this photo? It can not be restored."} %>
     </div>
     <hr />
 <% end %>
+
+
+
+
+
+<h2>Approved photos:</h2>
+<% @used_photos.each do |f| %>
+    <div class="box" style="width:400px; border: solid; border-color: #000000; border-width: 3px; padding:10px; margin: 10px;">
+      ID: <%= f.id %><br />
+      Name: <%= f.name %><br />
+      Size: <%= f.size_in_meg %><br />
+      Type: <%= f.image_content_type %><br />
+      Order: <%= f.order %><br />
+      Image: <img style="max-height: 200px;" src="<%= f.image.url %>" /><!--Set image as link to full size image-->
+      Delete image: <%= link_to "Delete photo", photo_path(f), method: :delete, data: {confirm: "Are you sure you wish to delete this photo? It can not be restored."} %>
+    </div>
+    <hr />
+<% end %>
+
+
 
 
 

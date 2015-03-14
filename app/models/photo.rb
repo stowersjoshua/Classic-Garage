@@ -5,9 +5,14 @@ class Photo < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   attr_accessor :approved_items
+  attr_accessor :unapproved_items
 
   def self.approved_items
     self.all.where(approved: true)
+  end
+
+  def self.unapproved_items
+    self.all.where(approved: false)
   end
 
   def size_in_meg

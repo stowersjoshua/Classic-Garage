@@ -17,7 +17,7 @@
         <div class="mynav col-xs-3">
           <div class="mynavbar" id="mynavbar">
             <% if @home_banner %>
-
+                <div>
                     <div id="circlebig"></div>
                     <div id="circle"></div>
                     <div id="rectangle"></div>
@@ -27,6 +27,7 @@
                     <div id="cover"></div>
                     <div id="rectanglebig"></div>
                     <div id="trapezoidbig"></div>
+                </div>
             <% else %>
                 <h2>You can't handle the truth!</h2>
             <% end %>
@@ -34,7 +35,9 @@
             </div>
         </div>
 
-        <div class="col-xs-9 maincontent" style="overflow: auto; height: 100vh;">
+        <!--<div class="col-xs-9 maincontent" style="overflow: auto; height: 100vh;">-->
+        <div class="col-xs-9 maincontent">
+
           <%= yield %>
         </div>
 

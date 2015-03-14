@@ -5,6 +5,7 @@ class AdminController < ApplicationController
   end
 
   def approve_photos
-    @photos = Photo.all
+    @new_photos = Photo.unapproved_items
+    @used_photos = Photo.approved_items
   end
 end

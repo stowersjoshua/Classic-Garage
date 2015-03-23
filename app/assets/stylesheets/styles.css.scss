@@ -16,13 +16,44 @@
 .maincontent {
   margin-left: 0px;
   margin-right: 0px;
+  font-family: 'Lora', serif;
+}
+
+.menucats {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  top:0;
+  z-index: 1000;
+}
+
+.menucats li {
+  font-family: 'Limelight', cursive;
+  font-size: 20px;
+}
+
+.menucats br {
+  margin-top: 0px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.menucats hr {
+  margin: 0px;
 }
 
 #wrapper {
+  position: relative;
   width: 90%;
 //  max-width: 1100px;
 //  min-width: 800px;
   margin: 0px auto;
+  margin-top: 240px;
+  @media screen and (min-width: 768px) {
+    margin-top: 75px;
+  }
 }
 
 .columns {

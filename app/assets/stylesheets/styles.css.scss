@@ -9,8 +9,21 @@
   height: 100vh;
   width: inherit;
   position: fixed;
-  top: 0;
-  margin:0;
+//  margin:0;
+  display:table-cell;vertical-align:bottom;
+  background-color: blue;
+}
+
+.gas-pump {
+  height: 100vh;
+  display:inline-block;
+  background-color: red;
+//  position: fixed;
+//  bottom: 0px;
+}
+
+#Menu {
+  fill: blue;
 }
 
 .maincontent {

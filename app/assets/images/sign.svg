@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="240px" height="988px" viewBox="0 0 240 988" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Sign</title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
             <feMorphology radius="2" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
@@ -102,7 +98,7 @@
                     <rect id="Rectangle-3" stroke="#000000" fill="#BFBFBF" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="88" y="82" width="30" height="45"></rect>
                     <rect id="Rectangle-4" stroke="#000000" fill="#BFBFBF" filter="url(#filter-3)" sketch:type="MSShapeGroup" x="32" y="82" width="30" height="45"></rect>
                     <path d="M150,34 L131.19105,84 L18.8089501,84 L0,34 L150,34 Z" id="Rectangle-2" stroke="#000000" fill="#FFFFFF" filter="url(#filter-4)" sketch:type="MSShapeGroup"></path>
-                    <text id="Menu" fill="white" filter="url(#filter-5)" sketch:type="MSTextLayer" font-family="Cooper Black" font-size="24" font-weight="686">
+                    <text id="Menu1" fill="white" filter="url(#filter-5)" sketch:type="MSTextLayer" font-family="Cooper Black" font-size="24" font-weight="686">
                         <tspan x="40" y="66" fill="#000000">Menu</tspan>
                     </text>
                 </g>

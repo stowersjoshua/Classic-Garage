@@ -35,7 +35,6 @@ body {
 .maincontent {
   margin-left: 0px;
   margin-right: 0px;
-  font-family: 'Lora', serif;
 }
 
 .menucats {
@@ -100,7 +99,6 @@ body {
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
   padding: 15px;
-  padding-bottom: 5px;
   opacity: 1;
 
   -webkit-transition: all .2s ease;
@@ -112,6 +110,7 @@ body {
 .menu-item-box img {
   width: 100%;
   border: 1px solid #000;
+  margin-bottom: 10px;
 }
 
 .menu-item-box p {
@@ -140,108 +139,4 @@ body {
     -moz-column-count: 5;
     column-count: 5;
   }
-}
-
-$x: 100vw;
-
-#cover {
-  z-index: -2;
-  background-color: #fff;
-  position: relative;
-  height: 100vh;
-  margin-top: -100vh;
-}
-
-#circlebig {
-  width: $x/8;
-  height: $x/8;
-  background: yellow;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 2;
-}
-
-#circle {
-  width: $x/10;
-  height: $x/10;
-  background: red;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  margin-top: -45%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 2;
-}
-
-#rectangle {
-  width: $x/40;
-  height: $x/40;
-  background: blue;
-  position: relative;
-  z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#trapezoid {
-  border-top: $x/20 solid red;
-  border-left: $x/100 solid transparent;
-  border-right: $x/100 solid transparent;
-  height: 0px;
-  width: $x/8;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#rectanglesmall1 {
-  width: $x/50;
-  height: $x/25;
-  background: blue;
-  position: relative;
-  z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-  right: 10%;
-  margin-top: -1vw;
-}
-
-#rectanglesmall2 {
-  width: $x/50;
-  height: $x/25;
-  background: blue;
-  position: relative;
-  z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -$x/25;
-  left: 10%;
-}
-
-#rectanglebig {
-  width: 80%;
-  height: 200vh;
-  background: red;
-  margin-top: -100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: -3;
-}
-
-#trapezoidbig {
-  border-bottom: $x/25 solid blue;
-  border-left: $x/150 solid transparent;
-  border-right: $x/150 solid transparent;
-  height: 0;
-  width: $x/4.5;
-  position: fixed;
-  bottom: 0;
-  left: $x/75;
-//  left: $x/25;
 }

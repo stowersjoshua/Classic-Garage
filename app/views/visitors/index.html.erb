@@ -18,10 +18,11 @@
       <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div id="<%= "cat-" + f.category %>" class="menu-item-box">
-              <p>Name: <%= f.name %></p><br/>
-              <p>Category: <%= f.category %></p><br/>
-              <p>Description: <%= f.description %></p><br/>
-              <p>Image: <img src="<%= f.image.url %>" style="max-width:250px;"/></p>
+
+              <img src="<%= f.image.url %>" style="max-width:250px;"/>
+              <p>Name: <%= f.name %></p>
+              <p>Category: <%= f.category %></p>
+              <p>Description: <%= f.description %></p>
             </div>
         <% end %>
       </div>

@@ -1,13 +1,11 @@
 $(document).ready(function () {
+
+
+
+
     $('a[href^="#"]').on('click', function(event) {
         //event.preventDefault();
         //$('html, #wrapper').animate({scrollTop:$(this.hash).offset().top}, 500);
-
-
-
-
-
-
 
         var target = $( $(this).attr('href') );
         if( target.length ) {

@@ -13,11 +13,11 @@
   <body>
   <main role="main" id="primary-content">
     <div class="pagecontent row">
-        <div class="mynav col-xs-3">
-          <div class="mynavbar" id="mynavbar">
+        <div class="mynav col-xs-3" style="background-color: green;">
+          <div class="mynavbar" id="mynavbar" style="background-color: red;">
             <% if @home_banner %>
                 <%= render "layouts/banner" %>
-
+                End of the line.
             <% else %>
                 <h2>You can't handle the truth!</h2>
             <% end %>
@@ -27,7 +27,6 @@
 
         <!--<div class="col-xs-9 maincontent" style="overflow: auto; height: 100vh;">-->
         <div class="col-xs-9 maincontent">
-
           <%= yield %>
         </div>
 

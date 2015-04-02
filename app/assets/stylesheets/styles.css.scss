@@ -16,7 +16,9 @@ body {
   width: inherit;
   position: fixed;
 //  margin:0;
-  display:table-cell;vertical-align:bottom;
+  display:table-cell;
+  vertical-align:bottom;
+  z-index: 2000;
 }
 
 .gas-pump {
@@ -24,8 +26,8 @@ body {
   display: block;
   margin-right: auto;
   margin-left: auto;
-//  position: fixed;
-//  bottom: 0px;
+  //position: absolute;
+  //bottom: 0px;
 }
 
 #Menu {
@@ -48,6 +50,10 @@ body {
 .menucats li {
   font-family: 'Limelight', cursive;
   font-size: 20px;
+}
+
+.menucats li :hover {
+  background-color: #B00100 !important;
 }
 
 .menucats br {

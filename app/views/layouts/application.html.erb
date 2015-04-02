@@ -16,21 +16,8 @@
         <div class="mynav col-xs-3">
           <div class="mynavbar" id="mynavbar">
             <% if @home_banner %>
+                <%= render "layouts/banner" %>
 
-
-                <%=link_to image_tag("sign.svg", :class => "gas-pump"), root_path %>
-
-                <!--<div>-->
-                    <!--<div id="circlebig"></div>-->
-                    <!--<div id="circle"></div>-->
-                    <!--<div id="rectangle"></div>-->
-                    <!--<div id="trapezoid"></div>-->
-                    <!--<div id="rectanglesmall1"></div>-->
-                    <!--<div id="rectanglesmall2"></div>-->
-                    <!--<div id="cover"></div>-->
-                    <!--<div id="rectanglebig"></div>-->
-                    <!--<div id="trapezoidbig"></div>-->
-                <!--</div>-->
             <% else %>
                 <h2>You can't handle the truth!</h2>
             <% end %>

@@ -97,8 +97,8 @@ body {
 }
 
 .menu-item-box {
-  background-color: #ffffff;;
-  background-image: url("item-box-texture.png");
+  background-color: #43C1C3;
+//  background-image: url("item-box-texture.png");
   display: inline-block;
   border: 3px solid #43C1C3;
   margin: 0 2px 15px;
@@ -111,6 +111,10 @@ body {
   -moz-transition: all .2s ease;
   -o-transition: all .2s ease;
   transition: all .2s ease;
+
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .menu-item-box img {

@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
 
-
+    $(".menu-link").on('click', function(event) {
+        alert("Loading menu page...");
+    });
 
     $(".maincontent").css('marginLeft', $(".gas-pump").width());
-
 
 
     $('a[href^="#"]').on('click', function(event) {

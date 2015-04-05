@@ -2,6 +2,7 @@ body {
   //background-image: url("http://apicfor.me/wp-content/images/starry-night-over-switzerland-960x630.jpg");
   //background-size: cover;
   //background-repeat: no-repeat;
+
 }
 
 .mynav {
@@ -30,10 +31,6 @@ body {
   //bottom: 0px;
 }
 
-#Menu {
-  fill: blue;
-}
-
 .maincontent {
   margin-left: 0px;
   margin-right: 0px;
@@ -50,10 +47,20 @@ body {
 .menucats li {
   font-family: 'Limelight', cursive;
   font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .menucats li :hover {
-  background-color: #B00100 !important;
+  background-color: inherit !important;
+  color: #000;
+  border-top: solid;
+  border-top-width: 3px;
+  border-top-color: #BA1222;
+  border-bottom: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #BA1222;
+  margin-top: -3px;
 }
 
 .menucats br {
@@ -99,12 +106,11 @@ body {
 .menu-item-box {
   background-color: #ffffff;;
   display: inline-block;
-  border: 2px solid #43C1C3;
+  border: 3px solid #43C1C3;
   margin: 0 2px 15px;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
-  padding: 15px;
   opacity: 1;
 
   -webkit-transition: all .2s ease;
@@ -115,8 +121,12 @@ body {
 
 .menu-item-box img {
   width: 100%;
-  border: 1px solid #000;
-  margin-bottom: 10px;
+  border-bottom: solid;
+  border-width: 3px;
+  border-color: #43C1C3;
+//  border: solid;
+//  border-width: 3px;
+//  border-color: #43C1C3;
 }
 
 .menu-item-box p {
@@ -145,4 +155,14 @@ body {
     -moz-column-count: 5;
     column-count: 5;
   }
+}
+
+.itemtext {
+//  background-color: #43C1C3;
+  padding: 10px;
+//  padding-top: 7px;
+}
+
+.itemname {
+  font-size: 16px;
 }

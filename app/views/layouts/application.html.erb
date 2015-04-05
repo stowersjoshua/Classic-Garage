@@ -12,8 +12,8 @@
 
   <body>
   <main role="main" id="primary-content">
-    <div class="pagecontent row">
-        <div class="mynav col-xs-3">
+    <div class="pagecontent">
+        <div class="mynav">
           <div class="mynavbar" id="mynavbar">
             <% if @home_banner %>
                 <%= render "layouts/banner" %>
@@ -26,7 +26,7 @@
         </div>
 
         <!--<div class="col-xs-9 maincontent" style="overflow: auto; height: 100vh;">-->
-        <div class="col-xs-9 maincontent">
+        <div class="maincontent">
           <%= yield %>
         </div>
 

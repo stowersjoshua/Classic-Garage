@@ -3,6 +3,10 @@ $(document).ready(function () {
 
 
 
+    $(".maincontent").css('marginLeft', $(".gas-pump").width());
+
+
+
     $('a[href^="#"]').on('click', function(event) {
         //event.preventDefault();
         //$('html, #wrapper').animate({scrollTop:$(this.hash).offset().top}, 500);
@@ -16,4 +20,8 @@ $(document).ready(function () {
             }, 1000);
         }
     });
+});
+
+$(window).resize(function() {
+    $(".maincontent").css('marginLeft', $(".gas-pump").width());
 });

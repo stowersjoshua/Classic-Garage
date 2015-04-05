@@ -11,16 +11,17 @@ body {
 }
 
 .gas-pump {
-  z-index: 2000;
+  z-index: 20000000;
+
   height: 95vh;
   margin-top: 5vh;
-
   position: fixed !important;
 }
 
 .maincontent {
   margin-left: 0px;
   margin-right: 0px;
+  margin-top: -75px !important;
 }
 
 .menucats {

@@ -18,11 +18,11 @@
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div id="<%= "cat-" + f.category %>" class="menu-item-box">
 
-
               <div class="itemtext">
-
-                <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px;"><%= f.name %></p>
-                <img src="<%= f.image.url %>" />
+                <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px; color:#fff;"><%= f.name %></p>
+              </div>
+              <img src="<%= f.image.url %>" />
+              <div class="itemtext" style="color:#fff;">
                 <!--<p>Category: <%= f.category %></p>-->
                 <p class="itemdesc"><%= f.description %></p>
               </div>

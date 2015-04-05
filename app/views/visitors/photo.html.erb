@@ -4,16 +4,10 @@
 
 
 <% @photos.each do |f| %>
-    Name: <%= f.name %>
-    <br />
-    Order: <%= f.order %>
-    <br />
-    File name: <%= f.image_file_name %>
-    <br />
-    <hr />
-    Photo:
+    <%#= f.name %>
+    <%#= f.order %>
+    <%#= f.image_file_name %>
     <img style="height: 300px;" src="<%= f.image.url %>" />
-    <br />
 <% end %>
 
 

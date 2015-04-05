@@ -7,7 +7,6 @@
       <li><a href="#cat-5">Other</a></li>
     </ul>
   <br/><br/><br/>
-  <hr/>
 </div>
 <!--nsert each menu item here-->
 <div id="wrapper">
@@ -19,10 +18,14 @@
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div id="<%= "cat-" + f.category %>" class="menu-item-box">
 
-              <img src="<%= f.image.url %>" style="max-width:250px;"/>
-              <p>Name: <%= f.name %></p>
-              <p>Category: <%= f.category %></p>
-              <p>Description: <%= f.description %></p>
+
+              <div class="itemtext">
+
+                <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px;"><%= f.name %></p>
+                <img src="<%= f.image.url %>" />
+                <!--<p>Category: <%= f.category %></p>-->
+                <p class="itemdesc"><%= f.description %></p>
+              </div>
             </div>
         <% end %>
       </div>

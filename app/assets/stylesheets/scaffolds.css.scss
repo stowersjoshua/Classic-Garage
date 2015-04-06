@@ -1,11 +1,11 @@
 body {
   background-color: #fff;
-  background-image: url("checkered_bg.svg");
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: 200px 200px;
+//  background-image: url("checkered_bg.svg");
+//  background-repeat: repeat;
+//  background-attachment: fixed;
+//  background-size: 200px 200px;
 
-  color: #333;
+  color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -27,7 +27,7 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #fff;
   &:visited {
     color: #666;
   }

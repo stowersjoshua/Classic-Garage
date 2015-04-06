@@ -30,29 +30,30 @@ body {
 
 .menucats {
   position: fixed;
-  background-color: #fff;
-  width: 100%;
-  top:0;
+  top:20px;
   z-index: 1000;
 }
 
 .menucats li {
   font-family: 'Limelight', cursive;
   font-size: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  background-color: #43C1C3;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .menucats li :hover {
   background-color: inherit !important;
-  color: #000;
-  border-top: solid;
-  border-top-width: 3px;
-  border-top-color: #BA1222;
-  border-bottom: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #BA1222;
-  margin-top: -3px;
+  color: #D8D9DB;
+//  color: #000;
+//  border-top: solid;
+//  border-top-width: 3px;
+//  border-top-color: #BA1222;
+//  border-bottom: solid;
+//  border-bottom-width: 3px;
+//  border-bottom-color: #BA1222;
+//  margin-top: -3px;
 }
 
 .menucats br {
@@ -74,7 +75,7 @@ body {
 //  min-width: 800px;
   margin: 0px auto;
   margin-top: 240px;
-  padding-top: 75px;
+  padding-top: 100px;
   @media screen and (min-width: 768px) {
     margin-top: 75px;
   }

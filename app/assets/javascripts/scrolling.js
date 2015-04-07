@@ -24,5 +24,19 @@ $(document).ready(function () {
 });
 
 $(window).resize(function() {
+
+    //If the screen's width is less than ~100%, hide the left-side div, create a top one.
+    if ( $(window).width() < $(window).height() * 0.80 ) {
+        //alert("Skinny");
+    }
+    else {
+
+    }
+
+
+    //Else, hide top one, show left one.
     $(".maincontent").css('marginLeft', $(".gas-pump").width());
+
+
+
 });

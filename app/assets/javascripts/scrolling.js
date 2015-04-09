@@ -1,5 +1,21 @@
+function layoutManager() {
+    //If the screen's width is less than ~100%, hide the left-side div, create a top one.
+    if ( $(window).width() < $(window).height() * 1.05 ) {
+        //$("#wrapper").css('marginLeft', 0);
+        $("#top-nav").fadeIn(500);
+        $("#mynavbar").fadeOut(500);
+    }
+    else {
+        $(".maincontent").css('marginLeft', $(".gas-pump").width());
+        $("#top-nav").fadeOut(500);
+        $("#mynavbar").fadeIn(500);
+    }
+}
+
+
 $(document).ready(function () {
 
+    layoutManager();
 
     $(".menu-link").on('click', function(event) {
         alert("Loading menu page...");
@@ -24,19 +40,5 @@ $(document).ready(function () {
 });
 
 $(window).resize(function() {
-
-    //If the screen's width is less than ~100%, hide the left-side div, create a top one.
-    if ( $(window).width() < $(window).height() * 0.80 ) {
-        //alert("Skinny");
-    }
-    else {
-
-    }
-
-
-    //Else, hide top one, show left one.
-    $(".maincontent").css('marginLeft', $(".gas-pump").width());
-
-
-
+    layoutManager();
 });

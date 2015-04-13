@@ -2,8 +2,9 @@ function layoutManager() {
     //If the screen's width is less than ~100%, hide the left-side div, create a top one.
     if ( $(window).width() < $(window).height() * 1.05 ) {
         //$("#wrapper").css('marginLeft', 0);
-        $("#top-nav").fadeIn(500);
-        $("#mynavbar").fadeOut(500);
+        //Vertically slide in the menu cat headers
+        $("#top-nav").fadeIn(500); //Make it slide in vertically
+        $("#mynavbar").fadeOut(500); //Make it slide out Horizontally
     }
     else {
         $(".maincontent").css('marginLeft', $(".gas-pump").width());

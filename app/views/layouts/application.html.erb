@@ -24,7 +24,12 @@
   <div id="top-nav">
     <!-- Your naming conventions are terrible =/ -->
     <!-- Put your code here for now, but I'll be moving it into a partial later -->
-    <%= render "layouts/bannerTop" %>
+    <% if @home_banner %>
+        <%= render "layouts/bannerTop" %>
+        <!--End of the line.-->
+    <% else %>
+        <!--Perhaps we should put an admin navbar here (reuse SVG?)-->
+    <% end %>
   </div>
 
 
@@ -38,7 +43,7 @@
                 <%= render "layouts/banner" %>
                 <!--End of the line.-->
             <% else %>
-                <!--<h2>You can't handle the truth!</h2>-->
+                <!--Perhaps we should put an admin navbar here (reuse SVG?)-->
             <% end %>
 
             </div>

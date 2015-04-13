@@ -5,6 +5,10 @@ function hideLeft(){
     $("#top-nav").fadeIn(500);
     $(".menucats").fadeOut(50);
     $(".categoryname").fadeIn(50);
+    $(".maincontent").css({
+        'marginLeft' : '0',
+        'width' : '100%'
+    });
 
     //$("#top-nav").show();
     //$(".menucats").hide();

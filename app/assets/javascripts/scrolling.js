@@ -1,18 +1,38 @@
+function hideLeft(){
+    //$("#wrapper").css('marginLeft', 0);
+
+    $("#mynavbar").fadeOut(500);
+    $("#top-nav").fadeIn(500);
+    $(".menucats").fadeOut(50);
+    $(".categoryname").fadeOut(50);
+
+    //$("#top-nav").show();
+    //$(".menucats").hide();
+    //$("#mynavbar").hide();
+    //$(".categoryname").show();
+}
+
+function showLeft() {
+    $(".maincontent").css('marginLeft', $(".gas-pump").width());
+    $("#top-nav").fadeOut(500);
+    $("#mynavbar").fadeIn(500);
+    $(".menucats").fadeIn(50);
+    $(".categoryname").fadeOut(50);
+
+    //$("#top-nav").hide();
+    //$(".menucats").show();
+    //$("#mynavbar").show();
+    //$(".categoryname").hide();
+}
+
 function layoutManager() {
-    //If the screen's width is less than ~100%, hide the left-side div, create a top one.
     if ( $(window).width() < $(window).height() * 1.05 ) {
-        //$("#wrapper").css('marginLeft', 0);
-        //Vertically slide in the menu cat headers
-        $("#top-nav").show(); //Make it slide in vertically
-        $(".menucats").hide();
-        $("#mynavbar").hide(); //Make it slide out Horizontally
+        hideLeft();
     }
     else {
-        $(".maincontent").css('marginLeft', $(".gas-pump").width());
-        $("#top-nav").hide();
-        $(".menucats").show();
-        $("#mynavbar").show();
+        showLeft();
     }
+
 }
 
 

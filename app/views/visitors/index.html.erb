@@ -13,7 +13,7 @@
   </div>
   <% 5.times do |x| %>
       <% x = x + 1 %>
-      <!--<h3 class="categoryname"><%= catcount_to_cat(x) %></h3>-->
+      <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
       <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div id="<%= "cat-" + f.category %>" class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">

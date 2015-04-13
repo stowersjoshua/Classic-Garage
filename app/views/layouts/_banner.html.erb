@@ -1,33 +1,13 @@
 
-<!--<svg class="defs-only" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >-->
-  <!--<symbol id="rainbow">-->
-    <!--<svg viewBox="0 0 200 100" preserveAspectRatio="none">-->
-
-    <!--</svg>-->
-    <!--<svg viewBox="4.5 1.5 51 49" preserveAspectRatio="xMidYMax meet">-->
-
-    <!--</svg>-->
-  <!--</symbol>-->
-
-<!--</svg>-->
-
-<!--<figure>-->
-  <!--<div>-->
-    <!--<svg style="height: 100vh;">-->
-      <!--<use xlink:href="#rainbow"></use>-->
-    <!--</svg>-->
-  <!--</div>-->
-<!--</figure>-->
-
-
-
-
-
-
-
-<!--This is the actual sidebar-->
-
-<!--<svg width="401px" height="943px" viewBox="0 0 401 943" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">-->
+<style>
+    #pagename tspan {
+        text-align: center;
+        text-anchor: middle;
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        fill: blue;
+    }
+</style>
 <svg class="gas-pump" viewBox="0 0 401 943" version="1.1" preserveAspectRatio="YMax none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 
     <defs>
@@ -121,7 +101,7 @@
             <path d="M185,42 L161.802295,104 L23.1977051,104 L0,42 L185,42 Z" id="Rectangle-2" fill="#43C1C3" filter="url(#filter-4)" sketch:type="MSShapeGroup"></path>
             <path d="M156.735498,98 L28.2645016,98 L9,48 L176,48 L156.735498,98 Z" id="Rectangle-9" stroke="#FFFFFF" stroke-width="2.7" stroke-linecap="square" fill="#43C1C3" sketch:type="MSShapeGroup"></path>
             <text id="pagename" sketch:type="MSTextLayer" font-family="SignPainter" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
-              <tspan x="36.808" y="82.3529412">Car Show</tspan>
+              <tspan x="90" text-anchor="middle" y="82.3529412"><%= @page_name || "Garage" %></tspan>
             </text>
           </g>
           <g id="Bottom" transform="translate(57.000000, 308.000000)">

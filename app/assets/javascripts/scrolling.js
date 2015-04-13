@@ -17,6 +17,20 @@ $(document).ready(function () {
 
     layoutManager();
 
+    var flip = 0;
+    setInterval( function () {
+            if (flip == 0) {
+                $(".bulb").attr("fill","#ba0d27");
+                flip = 1;
+            } else {
+                $(".bulb").attr("fill","#FFEA82");
+                flip = 0;
+            }
+
+            //alert("Hello")
+        },
+        3000 );
+
 
     $(".menu-link").on('click', function(event) {
         alert("Loading menu page...");

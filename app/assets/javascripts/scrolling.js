@@ -4,7 +4,7 @@ function hideLeft(){
     $("#mynavbar").fadeOut(500);
     $("#top-nav").fadeIn(500);
     $(".menucats").fadeOut(50);
-    $(".categoryname").fadeOut(50);
+    $(".categoryname").fadeIn(50);
 
     //$("#top-nav").show();
     //$(".menucats").hide();
@@ -32,7 +32,6 @@ function layoutManager() {
     else {
         showLeft();
     }
-
 }
 
 

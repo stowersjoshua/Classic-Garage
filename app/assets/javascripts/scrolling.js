@@ -3,13 +3,15 @@ function layoutManager() {
     if ( $(window).width() < $(window).height() * 1.05 ) {
         //$("#wrapper").css('marginLeft', 0);
         //Vertically slide in the menu cat headers
-        $("#top-nav").fadeIn(500); //Make it slide in vertically
-        $("#mynavbar").fadeOut(500); //Make it slide out Horizontally
+        $("#top-nav").show(); //Make it slide in vertically
+        $(".menucats").hide();
+        $("#mynavbar").hide(); //Make it slide out Horizontally
     }
     else {
         $(".maincontent").css('marginLeft', $(".gas-pump").width());
-        $("#top-nav").fadeOut(500);
-        $("#mynavbar").fadeIn(500);
+        $("#top-nav").hide();
+        $(".menucats").show();
+        $("#mynavbar").show();
     }
 }
 

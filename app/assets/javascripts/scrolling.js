@@ -17,6 +17,7 @@ $(document).ready(function () {
 
     layoutManager();
 
+
     $(".menu-link").on('click', function(event) {
         alert("Loading menu page...");
     });

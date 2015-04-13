@@ -4,7 +4,8 @@ class PhotosController < ApplicationController
   respond_to :html
 
   def public
-    @photos = Photo.approved_items
+    #@photos = Photo.approved_items
+    @photos = Photo.all
     @photo = Photo.new
     @home_banner  = true
     @page_name = "Photos"

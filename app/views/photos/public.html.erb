@@ -2,6 +2,17 @@
     <h3>Photos from the Classic Garage!</h3>
     <h4>app/views/photos/public.html.erb</h4>
 </div>
+
+
+<div style="background-color: blue;">
+<% @photos.each do |f| %>
+    <%= f.name %>
+    <%= f.image_file_name %>
+    <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
+<% end %>
+</div>
+
+
 <div id="galleria" style="height: 500px; width: 800px;">
   <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/800px-Biandintz_eta_zaldiak_-_modified2.jpg">
     <img
@@ -77,33 +88,42 @@
   </a>
 </div>
 
-<% @photos.each do |f| %>
-    <%#= f.name %>
-    <%#= f.order %>
-    <%#= f.image_file_name %>
-    <!--<img style="height: 300px;" src="<%= f.image.url %>" />-->
-<% end %>
-
-
-
-
-<%= link_to 'Upload your own!', new_photo_path, :class => "class-name" %>
-
-
-
-<script>
-
-    // Load the classic theme
-    Galleria.loadTheme('galleria.classic.js');
-
-    // Initialize Galleria
-    Galleria.run('#galleria');
-
-</script>
 
 
 
 
 
-<!--Show all images here-->
-<!--Include link to image upload page-->
+
+
+
+
+<!-- UPLOAD IMAGE FORM - We may want this inside of a modal.. -->
+<div style="background-color: chocolate">
+    <%= form_for(@photo, :html => { :multipart => true }) do |f| %>
+
+        <div class="field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="field">
+          <%= f.label :user %><br>
+          <%= f.text_field :user %>
+        </div>
+
+        <div class="field">
+          <%= f.label :order %><br>
+          <%= f.number_field :order %>
+        </div>
+
+        <div class="field">
+          <%#= f.label :approved %><br>
+          <%= f.file_field :image %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+
+    <% end %>
+</div><!-- /IMAGE UPLOAD FORM -->

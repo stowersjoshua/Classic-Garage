@@ -12,7 +12,7 @@ class Photo < ActiveRecord::Base
   end
 
   def self.unapproved_items
-    self.all.where(approved: false)
+    self.all.where(approved: false) && self.all.where(approved: nil)
   end
 
   def size_in_meg

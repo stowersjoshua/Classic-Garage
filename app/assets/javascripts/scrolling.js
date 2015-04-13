@@ -63,7 +63,7 @@ $(document).ready(function () {
         window.location = "/photo"
     });
     $(".about-link").on('click', function(event) {
-        alert("Coming soon!");
+        window.location = "/about"
     });
     $(".carshow-link").on('click', function(event) {
         alert("Coming soon!");

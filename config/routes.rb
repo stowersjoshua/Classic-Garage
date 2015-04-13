@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "admin/photos" => "admin#approve_photos"
   get "menu" => "menuitems#index"
   get "admin" => "admin#approve_photos"
+
+  get "about" => "about#index"
 end

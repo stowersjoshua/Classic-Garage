@@ -3,6 +3,13 @@ class PhotosController < ApplicationController
 
   respond_to :html
 
+  def public
+    @photos = Photo.approved_items
+    @photo = Photo.new
+    @home_banner  = true
+    @page_name = "Photos"
+  end
+
   def index
     @photos = Photo.approved_items
     respond_with(@photos)

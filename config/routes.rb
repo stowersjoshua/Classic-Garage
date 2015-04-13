@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :menuitems
   resources :photos
 
-  get "photo" => "visitors#photo"
+  #get "photo" => "visitors#photo"
   #get "contact" => "visitors#contact"
   get "admin/photos" => "admin#approve_photos"
   get "menu" => "menuitems#index"
@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   get "about" => "about#index"
   get "contact" => "contact#index"
+  get "photo" => "photos#public"
 end

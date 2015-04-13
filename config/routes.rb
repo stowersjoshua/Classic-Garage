@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   resources :photos
 
   get "photo" => "visitors#photo"
-  get "contact" => "visitors#contact"
+  #get "contact" => "visitors#contact"
   get "admin/photos" => "admin#approve_photos"
   get "menu" => "menuitems#index"
   get "admin" => "admin#approve_photos"
 
   get "about" => "about#index"
+  get "contact" => "contact#index"
 end

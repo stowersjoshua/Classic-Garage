@@ -69,7 +69,7 @@ $(document).ready(function () {
         alert("Coming soon!");
     });
     $(".contact-link").on('click', function(event) {
-        alert("Coming soon!");
+        window.location = "/contact"
     });
 
 

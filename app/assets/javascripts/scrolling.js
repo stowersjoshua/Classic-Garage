@@ -52,17 +52,27 @@ $(document).ready(function () {
                 $(".bulb").attr("fill","#FFEA82");
                 flip = 0;
             }
-
-            //alert("Hello")
         },
         3000 );
 
 
     $(".menu-link").on('click', function(event) {
-        alert("Loading menu page...");
+        window.location = "/"
+    });
+    $(".photos-link").on('click', function(event) {
+        window.location = "/photo"
+    });
+    $(".about-link").on('click', function(event) {
+        alert("Coming soon!");
+    });
+    $(".carshow-link").on('click', function(event) {
+        alert("Coming soon!");
+    });
+    $(".contact-link").on('click', function(event) {
+        alert("Coming soon!");
     });
 
-    $(".maincontent").css('marginLeft', $(".gas-pump").width());
+    //$(".maincontent").css('marginLeft', $(".gas-pump").width());
 
 
     $('a[href^="#"]').on('click', function(event) {

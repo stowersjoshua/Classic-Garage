@@ -4,13 +4,15 @@
 </div>
 
 
-<div style="background-color: blue;">
-<% @photos.each do |f| %>
-    <%= f.name %>
-    <%= f.image_file_name %>
-    <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
-<% end %>
+<div id="galleria">
+  <div>
+    <% @photos.each do |f| %>
+        <a href="<%= f.image.url %>"></a>
+        <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
+    <% end %>
+  </div>
 </div>
+<<<<<<< HEAD
 
 
 <div id="galleria" style="height: 500px; width: 800px;">
@@ -96,6 +98,10 @@
     data-description="Mendocino county, California, USA."
     >
   </a>
+=======
+<div id="carsdiv">
+    <%= render "photos/cars" %>
+>>>>>>> f0de314cbed78fe607786ac0a73aedc4f802f822
 </div>
 
 

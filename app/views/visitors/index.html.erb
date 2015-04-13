@@ -16,7 +16,7 @@
       <!--<h3 class="categoryname"><%= catcount_to_cat(x) %></h3>-->
       <div class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div id="<%= "cat-" + f.category %>" class="menu-item-box">
+            <div id="<%= "cat-" + f.category %>" class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
 
               <div class="itemtext">
                 <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px; color:#fff;"><%= f.name %></p>
@@ -27,11 +27,31 @@
                 <p class="itemdesc"><%= f.description %></p>
               </div>
             </div>
+
         <% end %>
       </div>
       <hr />
   <% end %>
 </div>
-<div id="bottom">This is the bottom of the page</div>
+
+<% @menu_items.each do |g| %>
+    <!-- Modals -->
+    <div class="modal fade" id="<%= "menuitem-" + g.id.to_s %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><%= g.name %></h4>
+          </div>
+          <div class="modal-body">
+            <img src="<%= g.image.url %>" />
+            <p class="itemtext2"><%= g.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
 <!--Please, don't delete this. <3-->
 <!--<%#= link_to 'Users:', users_path %> <%#= User.count %>-->

@@ -1,6 +1,4 @@
 function hideLeft(){
-    //$("#wrapper").css('marginLeft', 0);
-
     $("#mynavbar").fadeOut(500);
     $("#top-nav").fadeIn(500);
     $(".menucats").fadeOut(50);
@@ -9,11 +7,6 @@ function hideLeft(){
         'marginLeft' : '0',
         'width' : '100%'
     });
-
-    //$("#top-nav").show();
-    //$(".menucats").hide();
-    //$("#mynavbar").hide();
-    //$(".categoryname").show();
 }
 
 function showLeft() {
@@ -22,11 +15,6 @@ function showLeft() {
     $("#mynavbar").fadeIn(500);
     $(".menucats").fadeIn(50);
     $(".categoryname").fadeOut(50);
-
-    //$("#top-nav").hide();
-    //$(".menucats").show();
-    //$("#mynavbar").show();
-    //$(".categoryname").hide();
 }
 
 function layoutManager() {
@@ -41,8 +29,10 @@ function layoutManager() {
 
 $(document).ready(function () {
 
+    //Responsive
     layoutManager();
 
+    //Flip banner sign lights on and off
     var flip = 0;
     setInterval( function () {
             if (flip == 0) {
@@ -54,8 +44,9 @@ $(document).ready(function () {
             }
         },
         3000 );
+    //End banner light flipper
 
-
+    //Banner links
     $(".menu-link").on('click', function(event) {
         window.location = "/"
     });
@@ -71,30 +62,22 @@ $(document).ready(function () {
     $(".contact-link").on('click', function(event) {
         window.location = "/contact"
     });
+    //End banner links
 
-
-    //$(".maincontent").css('marginLeft', $(".gas-pump").width());
-
-
+    //Auto scroller
     $('a[href^="#"]').on('click', function(event) {
-        //event.preventDefault();
-        //$('html, #wrapper').animate({scrollTop:$(this.hash).offset().top}, 500);
 
         var target = $( $(this).attr('href') );
         if( target.length ) {
             event.preventDefault();
             $('html, body').animate({
-            //$('div.wrapper').animate({
                 scrollTop: target.offset().top - 50
             }, 1000);
         }
     });
-
-
+    //End auto scroller
 });
 
 $(window).resize(function() {
     layoutManager();
 });
-
-$(".gas-pump").css('bottom', 0);

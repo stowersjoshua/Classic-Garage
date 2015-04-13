@@ -14,6 +14,10 @@
 
 
 <div id="galleria" style="height: 500px; width: 800px;">
+
+
+
+
   <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/800px-Biandintz_eta_zaldiak_-_modified2.jpg">
     <img
     src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/100px-Biandintz_eta_zaldiak_-_modified2.jpg",
@@ -22,6 +26,12 @@
     data-description="Horses on Bianditz mountain, in Navarre, Spain."
     >
   </a>
+
+
+
+
+
+
   <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Athabasca_Rail_at_Brule_Lake.jpg/800px-Athabasca_Rail_at_Brule_Lake.jpg">
     <img
     src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Athabasca_Rail_at_Brule_Lake.jpg/100px-Athabasca_Rail_at_Brule_Lake.jpg",
@@ -127,3 +137,20 @@
 
     <% end %>
 </div><!-- /IMAGE UPLOAD FORM -->
+
+
+
+
+
+
+
+
+
+<script>//Page specific, do not put into a .JS file
+    Galleria.loadTheme('galleria.classic.js');
+    Galleria.run('#galleria');
+    $(".gas-pump").css({
+        'marginTop' : '5vh',
+        'height' : '95vh'
+    });
+</script>

@@ -1,5 +1,5 @@
 function hideLeft(){
-    $("#mynavbar").fadeOut(500);
+    $("#left-nav").fadeOut(500);
     $("#top-nav").fadeIn(500);
     $(".menucats").fadeOut(50);
     $(".categoryname").fadeIn(50);
@@ -12,7 +12,7 @@ function hideLeft(){
 function showLeft() {
     $(".maincontent").css('marginLeft', $(".gas-pump").width());
     $("#top-nav").fadeOut(500);
-    $("#mynavbar").fadeIn(500);
+    $("#left-nav").fadeIn(500);
     $(".menucats").fadeIn(50);
     $(".categoryname").fadeOut(50);
 }
@@ -71,7 +71,7 @@ $(document).ready(function () {
         if( target.length ) {
             event.preventDefault();
             $('html, body').animate({
-                scrollTop: target.offset().top - 50
+                scrollTop: target.offset().top - 50 //50
             }, 1000);
         }
     });

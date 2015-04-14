@@ -17,47 +17,28 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+<body>
 
-
-  <!-- THIS IS THE DIV FOR YOUR TOP MENU BANNER -->
   <div id="top-nav">
-    <!-- Your naming conventions are terrible =/ -->
-    <!-- Put your code here for now, but I'll be moving it into a partial later -->
     <% if @home_banner %>
         <%= render "layouts/bannerTop" %>
-        <!--End of the line.-->
     <% else %>
-        <!--Perhaps we should put an admin navbar here (reuse SVG?)-->
+        <!-- Admin nav banner -->
     <% end %>
   </div>
 
-
-
-
   <main role="main" id="primary-content">
-    <div class="pagecontent">
-        <div class="mynav">
-          <div id="mynavbar" class="mynavbar"> <!-- "mynavbar? Wirklich?" -->
-            <% if @home_banner %>
-                <%= render "layouts/banner" %>
-                <!--End of the line.-->
-            <% else %>
-                <!--Perhaps we should put an admin navbar here (reuse SVG?)-->
-            <% end %>
-
-            </div>
-        </div>
-
-        <!--<div class="col-xs-9 maincontent" style="overflow: auto; height: 100vh;">-->
-
-      <div class="maincontent">
-          <%= yield %>
-      </div>
-
-    </div><!--End row-->
+    <div id="left-nav">
+      <% if @home_banner %><%= render "layouts/banner" %>
+      <% end %>
+    </div>
+    <div class="maincontent">
+      <%= yield %>
+    </div>
   </main>
-  </body>
+
+</body>
+
 </html>
 
 <script>

@@ -3,56 +3,73 @@
     <h4>app/views/photos/public.html.erb</h4>
 </div>
 
+<div class="photowrapper">
+    <div class="carsmenu">
+      <div class="addphoto2 hvr-shrink" data-toggle="modal" data-target="#addimageform">
+        <div class="addphoto">+</div>
+      </div>
+    </div>
 
-<div id="galleria">
-  <div>
-    <% @photos.each do |f| %>
-        <a href="<%= f.image.url %>"></a>
-        <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
-    <% end %>
+    <div id="galleria">
+      <div>
+        <% @photos.each do |f| %>
+            <a href="<%= f.image.url %>"></a>
+            <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
+        <% end %>
+      </div>
+    </div>
+
+    <div id="carsdiv">
+
+      <%= render "photos/cars" %>
+
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="addimageform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add an Image</h4>
+      </div>
+      <div class="modal-body">
+        <!-- UPLOAD IMAGE FORM - We may want this inside of a modal.. -->
+        <div>
+          <%= form_for(@photo, :html => { :multipart => true }) do |f| %>
+
+              <div class="field">
+                <%= f.label :name %><br>
+                <%= f.text_field :name %>
+              </div>
+
+              <div class="field">
+                <%= f.label :user %><br>
+                <%= f.text_field :user %>
+              </div>
+
+              <div class="field">
+                <%= f.label :order %><br>
+                <%= f.number_field :order %>
+              </div>
+
+              <div class="field">
+                <%#= f.label :approved %><br>
+                <%= f.file_field :image %>
+              </div>
+
+              <div class="actions">
+                <%= f.submit %>
+              </div>
+
+          <% end %>
+        </div><!-- /IMAGE UPLOAD FORM -->
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="carsdiv">
-    <%= render "photos/cars" %>
-
-</div>
-
-
-
-
-
-
-<!-- UPLOAD IMAGE FORM - We may want this inside of a modal.. -->
-<div style="background-color: chocolate">
-    <%= form_for(@photo, :html => { :multipart => true }) do |f| %>
-
-        <div class="field">
-          <%= f.label :name %><br>
-          <%= f.text_field :name %>
-        </div>
-
-        <div class="field">
-          <%= f.label :user %><br>
-          <%= f.text_field :user %>
-        </div>
-
-        <div class="field">
-          <%= f.label :order %><br>
-          <%= f.number_field :order %>
-        </div>
-
-        <div class="field">
-          <%#= f.label :approved %><br>
-          <%= f.file_field :image %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-
-    <% end %>
-</div><!-- /IMAGE UPLOAD FORM -->
 
 
 

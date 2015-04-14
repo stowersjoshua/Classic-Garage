@@ -31,7 +31,8 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     flash[:notice] = 'Photo was successfully created.' if @photo.save
-    respond_with(@photo)
+    #respond_with(@photo)
+    redirect_to "/photo"
   end
 
   def update

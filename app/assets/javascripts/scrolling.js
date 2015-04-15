@@ -57,7 +57,7 @@ $(document).ready(function () {
         window.location = "/about"
     });
     $(".carshow-link").on('click', function(event) {
-        alert("Coming soon!");
+        window.location = "/carshow"
     });
     $(".contact-link").on('click', function(event) {
         window.location = "/contact"

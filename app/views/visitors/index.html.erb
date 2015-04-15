@@ -8,8 +8,7 @@
       <li><a href="#cat-3">Desserts</a></li>
       <li><a href="#cat-4">Appetizers</a></li>
       <li><a href="#cat-5">Other</a></li>
-    </ul>
-    <br/><br/><br/>
+    </ul><br/><br/><br/>
   </div>
   <% 5.times do |x| %>
       <% x = x + 1 %>
@@ -23,11 +22,9 @@
               </div>
               <img src="<%= f.image.url %>" />
               <div class="itemtext" style="color:#fff;">
-                <!--<p>Category: <%= f.category %></p>-->
                 <p class="itemdesc"><%= f.description %></p>
               </div>
             </div>
-
         <% end %>
       </div>
       <hr />

@@ -5,10 +5,10 @@ class PhotosController < ApplicationController
 
   def public
     #@photos = Photo.approved_items
-    @photos = Photo.all
-    @photo = Photo.new
     @home_banner  = true
     @page_name = "Photos"
+    @photos = Photo.all
+    @photo = Photo.new
   end
 
   def index

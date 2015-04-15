@@ -42,9 +42,7 @@ body {
 }
 
 .maincontent {
-  //margin-left: 0px;
-  //margin-right: 0px;
-  //margin-top: -55px !important;
+  padding-top: 5vh;
 }
 
 .menucats {
@@ -98,7 +96,7 @@ body {
   width: 90%;
   margin: 0 auto;
   //margin-top: 240;
-  padding-top: 100px;
+  //padding-top: 100px;
   @media screen and (min-width: 768px) {
     margin-top: 0;//75
     padding-top: 120px;
@@ -318,4 +316,14 @@ body {
 
 .abouttitle2 {
   font-size: 18px;
+}
+
+//Carshow exclusives
+.blog-box {
+  border-color: #43C1C3;
+  background-color: #fff;
+  p { color: #000000; }
+  .head-left, .head-right { color: #BA1222; top: 10px; }
+  .head-left { font-size: 24px; float: left; }
+  .head-right { font-size: 15px; float: right; margin-right: 10px; }
 }

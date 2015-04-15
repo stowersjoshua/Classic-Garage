@@ -2,7 +2,6 @@ body {
   //background-image: url("http://apicfor.me/wp-content/images/starry-night-over-switzerland-960x630.jpg");
   //background-size: cover;
   //background-repeat: no-repeat;
-
 }
 
 #top-nav {
@@ -34,10 +33,8 @@ body {
 
 .gas-pump {
   z-index: 20000000;
-
   height: 95vh;
   margin-top: 5vh;
-  //bottom: 0;
   position: fixed !important;
 }
 
@@ -49,58 +46,41 @@ body {
   position: fixed;
   top:20px;
   z-index: 1000;
-}
-
-.menucats li {
-  font-family: 'Limelight', cursive;
-  font-size: 20px;
-  background-color: #43C1C3;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.menucats li :hover {
-  background-color: inherit !important;
-  color: #D8D9DB;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  /* ...and now for the proper property */
-  transition:.5s;
-//  color: #000;
-//  border-top: solid;
-//  border-top-width: 3px;
-//  border-top-color: #BA1222;
-//  border-bottom: solid;
-//  border-bottom-width: 3px;
-//  border-bottom-color: #BA1222;
-//  margin-top: -3px;
-}
-
-.menucats br {
-  margin-top: 0px;
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: inline;
+  li {
+    font-family: 'Limelight', cursive;
+    font-size: 20px;
+    background-color: #43C1C3;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    :hover {
+      background-color: inherit !important;
+      color: #D8D9DB;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition:.5s;
+    }
   }
 }
 
-.menucats hr {
-  margin: 0;
+.menucats {
+  br {
+    margin-top: 0;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: inline;
+    }
+  }
+  hr { margin: 0; }
 }
 
 #wrapper {
   position: relative;
   width: 90%;
   margin: 0 auto;
-  //margin-top: 240;
-  //padding-top: 100px;
-  @media screen and (min-width: 768px) {
-    margin-top: 0;//75
-    padding-top: 120px;
-  }
+  padding-top: 120px;
 }
 
 .columns {
@@ -123,7 +103,6 @@ body {
 
 .menu-item-box {
   background-color: #43C1C3;
-//  background-image: url("item-box-texture.png");
   display: inline-block;
   border: 3px solid #43C1C3;
   margin: 0 2px 15px;
@@ -137,9 +116,9 @@ body {
   -o-transition: all .2s ease;
   transition: all .2s ease;
 
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow:         3px 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Shrink */
@@ -151,33 +130,34 @@ body {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
-}
-.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+
+  &:hover, &:focus, &:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
 }
 
 .modal {
   z-index: 20000001;
 }
 
-.menu-item-box img {
-  width: 100%;
-  border-bottom: solid;
-  border-width: 3px;
-  border-color: #43C1C3;
-//  border: solid;
-//  border-width: 3px;
-//  border-color: #43C1C3;
+.modal-body p {
+  padding-top: 10px;
 }
 
-.menu-item-box p {
-  margin: 0;
+.menu-item-box {
+  img {
+    width: 100%;
+    border-bottom: solid;
+    border-width: 3px;
+    border-color: #43C1C3;
+  }
+  p { margin: 0; }
 }
 
 @media (min-width: 640px) {
@@ -205,9 +185,8 @@ body {
 }
 
 .itemtext {
-//  background-color: #43C1C3;
   padding: 10px;
-//  padding-top: 7px;
+  color: #fff;
 }
 
 .itemname {
@@ -215,11 +194,8 @@ body {
 }
 
 .nav {
-//  margin-left: auto;
-//  margin-right: auto;
   margin-top: 20px;
   min-width: 555px;
-  //position: inherit !important;
 }
 
 .modal-content {
@@ -227,11 +203,6 @@ body {
   border: none;
 }
 
-.itemtext2 {
-  //  background-color: #43C1C3;
-  padding-top: 10px;
-  //  padding-top: 7px;
-}
 
 .navbar-collapse.collapse {
   display: block!important;
@@ -294,6 +265,7 @@ body {
   width:100%;
 }
 
+//  about/index
 .panels2 {
   padding-left: 20px;
 }
@@ -318,7 +290,7 @@ body {
   font-size: 18px;
 }
 
-//Carshow exclusives
+//  articles/index, articles/admin
 .blog-box {
   border-color: #43C1C3;
   background-color: #fff;

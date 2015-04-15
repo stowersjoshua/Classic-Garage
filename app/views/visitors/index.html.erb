@@ -13,15 +13,14 @@
   <% 5.times do |x| %>
       <% x = x + 1 %>
       <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
-      <div class="columns">
+      <div id="cat-<%= x %>" class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div id="<%= "cat-" + f.category %>" class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
-
+            <div class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
               <div class="itemtext">
                 <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px; color:#fff;"><%= f.name %></p>
               </div>
               <img src="<%= f.image.url %>" />
-              <div class="itemtext" style="color:#fff;">
+              <div class="itemtext">
                 <p class="itemdesc"><%= f.description %></p>
               </div>
             </div>
@@ -42,8 +41,8 @@
           </div>
           <div class="modal-body">
             <img src="<%= g.image.url %>" />
-            <p class="itemtext2"><%= number_to_currency(g.price/100) %></p>
-            <p class="itemtext2"><%= g.description %></p>
+            <p><%= number_to_currency(g.price/100) %></p>
+            <p><%= g.description %></p>
           </div>
         </div>
       </div>

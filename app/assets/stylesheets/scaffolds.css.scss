@@ -9,15 +9,11 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   line-height: 18px;
-  //min-width: 1500px;
-  //line-height: 18px;
-
 }
 
 p, ol, ul, td {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-//  line-height: 18px;
 }
 
 pre {
@@ -43,9 +39,7 @@ div {
   }
 }
 
-#notice {
-  color: green;
-}
+#notice { color: green; }
 
 .field_with_errors {
   padding: 2px;

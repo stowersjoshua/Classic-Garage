@@ -4,6 +4,11 @@
 
 .nav > li > a:hover, .nav > li > a:focus { background-color: inherit; } //Overrides Bootstrap's default nav-highlight
 
+.modal-backdrop {
+  z-index: 0 !important;
+  display: none;
+}
+
 // make all images responsive by default
 img {
   @extend .img-responsive;

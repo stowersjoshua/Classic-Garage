@@ -17,7 +17,7 @@
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
               <div class="itemtext">
-                <p class="itemname" style="text-align: center; font-weight: bold; margin-bottom: 5px; color:#fff;"><%= f.name %></p>
+                <p><%= f.name %></p>
               </div>
               <img src="<%= f.image.url %>" />
               <div class="itemtext">

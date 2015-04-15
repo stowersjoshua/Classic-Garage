@@ -1,8 +1,3 @@
-<div style="padding: 20px; background-color: chocolate;">
-    <h3>Photos from the Classic Garage!</h3>
-    <h4>app/views/photos/public.html.erb</h4>
-</div>
-
 <div class="photowrapper">
     <div class="carsmenu">
       <div class="addphoto2 hvr-shrink" data-toggle="modal" data-target="#addimageform">
@@ -79,11 +74,12 @@
 
 
 
-<script>//Page specific, do not put into a .JS file
+<script>
+    //Page specific, do not put into a .JS file
     Galleria.loadTheme('galleria.classic.js');
     Galleria.run('#galleria');
-    $(".gas-pump").css({
-        'marginTop' : '5vh',
-        'height' : '95vh'
+    //This page should have a black background. =)
+    $(document).ready(function () {
+        $(".bg").css("background-color","black");
     });
 </script>

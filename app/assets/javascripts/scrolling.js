@@ -1,20 +1,32 @@
 function hideLeft(){
-    $("#left-nav").fadeOut(500);
-    $("#top-nav").fadeIn(500);
-    $(".menucats").fadeOut(50);
-    $(".categoryname").fadeIn(50);
+
+    a = $("#left-nav");
+    b = $(".menucats");
+    c = $("#top-nav");
+    d = $(".categoryname");
+
+    a.fadeOut(500);
+    b.fadeOut(500);
+    c.fadeIn(500);
+    d.fadeIn(500);
+
     $(".maincontent").css({
-        'marginLeft' : '0',
-        'width' : '100%'
+        'marginLeft' : '0'
     });
 }
 
 function showLeft() {
     $(".maincontent").css('marginLeft', $(".gas-pump").width());
-    $("#top-nav").fadeOut(500);
-    $("#left-nav").fadeIn(500);
-    $(".menucats").fadeIn(50);
-    $(".categoryname").fadeOut(50);
+
+    a = $("#left-nav");
+    b = $(".menucats");
+    c = $("#top-nav");
+    d = $(".categoryname");
+
+    a.fadeIn(500);
+    b.fadeIn(500);
+    c.fadeOut(500);
+    d.fadeOut(500);
 }
 
 function layoutManager() {

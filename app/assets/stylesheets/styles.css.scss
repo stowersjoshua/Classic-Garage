@@ -7,7 +7,6 @@ body {
 #top-nav {
   width: 100vw;
   display: none;
-  //margin-top: -35px;
   margin-top: 10px;
 }
 
@@ -53,9 +52,10 @@ body {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow:    3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     box-shadow:         3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    :hover {
-      background-color: inherit !important;
-      color: #D8D9DB;
+    &:hover {
+      //background-color: inherit !important;
+      background-color: #349799; //#D8D9DB
+      font-color: red;
       -o-transition:.5s;
       -ms-transition:.5s;
       -moz-transition:.5s;
@@ -63,9 +63,6 @@ body {
       transition:.5s;
     }
   }
-}
-
-.menucats {
   br {
     margin-top: 0;
     display: none;
@@ -202,7 +199,6 @@ body {
   background-color: #43C1C3;
   border: none;
 }
-
 
 .navbar-collapse.collapse {
   display: block!important;

@@ -22,15 +22,8 @@ pre {
   font-size: 11px;
 }
 
-a {
+a, .nav a {
   color: #fff;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 div {

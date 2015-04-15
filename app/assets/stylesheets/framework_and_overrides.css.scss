@@ -2,6 +2,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.nav > li > a:hover, .nav > li > a:focus { background-color: inherit; } //Overrides Bootstrap's default nav-highlight
+
 // make all images responsive by default
 img {
   @extend .img-responsive;

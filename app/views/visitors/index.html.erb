@@ -15,7 +15,7 @@
       <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
       <div id="cat-<%= x %>" class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
+            <div class="menu-item-box shadowed hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
               <div class="itemtext">
                 <p><%= f.name %></p>
               </div>
@@ -49,6 +49,7 @@
     </div>
 <% end %>
 
+<div class="fb-like" data-href="https://www.facebook.com/pages/The-Classic-Garage/850748648283405?pnref=story" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
 <!--Please, don't delete this. <3-->
 <!--<%#= link_to 'Users:', users_path %> <%#= User.count %>-->

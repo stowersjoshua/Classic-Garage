@@ -3,7 +3,7 @@ class VisitorsController < ApplicationController
   def index
     @menu_items = Menuitem.all.order(order: :asc)
     @home_banner  = true
-    @page_name = "Home"
+    @page_name = "Menu"
   end
 
   def photo

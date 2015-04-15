@@ -4,6 +4,12 @@ body {
   //background-repeat: no-repeat;
 }
 
+.fb-like {
+  position: fixed;
+  top:0px;
+  right:0px;
+}
+
 #top-nav {
   width: 100vw;
   display: none;
@@ -97,6 +103,12 @@ body {
   color: #43C1C3;
 }
 
+.shadowed {
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow:         3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
 .menu-item-box {
   background-color: #43C1C3;
   border: 3px solid #43C1C3;
@@ -115,10 +127,6 @@ body {
   -moz-transition: all .2s ease;
   -o-transition: all .2s ease;
   transition: all .2s ease;
-
-  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow:    3px 3px 5px 0 rgba(0, 0, 0, 0.5);
-  box-shadow:         3px 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Shrink */
@@ -130,7 +138,7 @@ body {
   -moz-transform: translateZ(0);
   transform: translateZ(0);
 
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+//  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -303,6 +311,37 @@ body {
 }
 
 //  articles/index, articles/admin
+
+.articlewrapper{
+  padding:20px;
+
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 2;
+  column-gap: 15px;
+  column-fill: auto;
+}
+
+@media (min-width: 640px) {
+  .articlewrapper {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width: 960px) {
+  .articlewrapper {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
 .blog-box {
   border-color: #43C1C3;
   background-color: #fff;
@@ -310,11 +349,30 @@ body {
   .head-left, .head-right { color: #BA1222; top: 10px; }
   .head-left { font-size: 24px; float: left; }
   .head-right { font-size: 15px; float: right; margin-right: 10px; }
+
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  opacity: 1;
 }
 
+.contactwrapper {
+  padding: 20px;
+}
 
-
-
+.contactbox {
+  background-color: #43C1C3;
+  border: 3px solid #43C1C3;
+  margin: 0 10px 15px;
+  padding: 20px;
+  padding-bottom: 10px;
+  .contacttext {
+    margin-left: 5px;
+  }
+}
 
 
 //#carsdiv, .carsmenu, .galleria-theme-classic {

@@ -11,12 +11,16 @@ function hideLeft(){
     d.fadeIn(500);
 
     $(".maincontent").css({
-        'marginLeft' : '0'
+        'marginLeft' : '0',
+        'marginTop' : '0'
     });
 }
 
 function showLeft() {
-    $(".maincontent").css('marginLeft', $(".gas-pump").width());
+    $(".maincontent").css({
+        'marginLeft' : $(".gas-pump").width(),
+        'marginTop' : '5vh'
+    });
 
     a = $("#left-nav");
     b = $(".menucats");
@@ -27,6 +31,7 @@ function showLeft() {
     b.fadeIn(500);
     c.fadeOut(500);
     d.fadeOut(500);
+
 }
 
 function layoutManager() {

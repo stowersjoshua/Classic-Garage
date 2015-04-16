@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require ckeditor/init
-//= require turbolinks
+// require turbolinks
 //= turbolinks_transitions.js
+// require jquery.pjax
 //= require bootstrap-sprockets
 //= require jquery.scrollTo
 //= require_tree .

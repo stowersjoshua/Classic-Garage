@@ -32,21 +32,14 @@
       <div class="modal-body">
         <!-- UPLOAD IMAGE FORM - We may want this inside of a modal.. -->
         <div>
-          <%= form_for(@photo, :html => { :multipart => true }) do |f| %>
+          <%= bootstrap_form_for(@photo, :html => { :multipart => true }) do |f| %>
 
               <div class="field">
-                <%= f.label :name %><br>
-                <%= f.text_field :name %>
+                <%= f.text_field :name, label: "Photo Name" %>
               </div>
 
               <div class="field">
-                <%= f.label :user %><br>
-                <%= f.text_field :user %>
-              </div>
-
-              <div class="field">
-                <%= f.label :order %><br>
-                <%= f.number_field :order %>
+                <%= f.text_field :user, label: "Your Name" %>
               </div>
 
               <div class="field">

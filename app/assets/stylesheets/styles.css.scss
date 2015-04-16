@@ -286,6 +286,10 @@ body {
   transition: all .2s ease;
 }
 
+.submitphoto {
+  color:#000;
+}
+
 #cars {
   width:100%;
 }
@@ -305,6 +309,7 @@ body {
 .aboutpanel2 {
   background-color: #43C1C3;
   padding: 20px;
+
 }
 
 .abouttitle {
@@ -319,32 +324,6 @@ body {
 
 .articlewrapper{
   padding:20px;
-
-  -webkit-column-count: 2;
-  -webkit-column-gap: 10px;
-  -webkit-column-fill: auto;
-  -moz-column-count: 2;
-  -moz-column-gap: 10px;
-  -moz-column-fill: auto;
-  column-count: 2;
-  column-gap: 15px;
-  column-fill: auto;
-}
-
-@media (min-width: 0px) {
-  .articlewrapper {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-  }
-}
-
-@media (min-width: 960px) {
-  .articlewrapper {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
 }
 
 .blog-box {
@@ -354,14 +333,18 @@ body {
   .head-left, .head-right { color: #BA1222; top: 10px; }
   .head-left { font-size: 24px; float: left; }
   .head-right { font-size: 15px; float: right; margin-right: 10px; }
+}
 
-  display: inline-block;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid-column;
-  opacity: 1;
+.btn-default {
+  background-color: #43C1C3;
+  border-color: #fff;
+  color:#fff;
+}
+
+.btn-default:hover {
+  background-color: #349799;
+  border-color: #fff;
+  color:#fff;
 }
 
 .contactwrapper {
@@ -378,6 +361,8 @@ body {
     margin-left: 5px;
   }
 }
+
+
 
 
 //#carsdiv, .carsmenu, .galleria-theme-classic {

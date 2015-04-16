@@ -18,6 +18,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'bootstrap_form'
 gem 'high_voltage'
 gem 'passenger'
 #gem "jquery-scrollto-rails"

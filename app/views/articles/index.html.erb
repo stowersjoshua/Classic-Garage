@@ -2,7 +2,7 @@
 
 <!--<div class="wide-page-spacing"></div>-->
 
-<div class="row articlewrapper columns">
+<div class="articlewrapper">
     <% @articles.each do |article| %>
         <div class="well blog-box shadowed">
             <span class="head-left"><%= article.title.html_safe %></span><span class="head-right"><%= article.created_at.strftime("%B %d, %Y") %></span>

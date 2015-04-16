@@ -10,27 +10,63 @@ function hideLeft(){
     c.fadeIn(500);
     d.fadeIn(500);
 
-    $(".maincontent").css({
+    //$(".maincontent").css({
+    //    'marginLeft' : '0',
+    //    'marginTop' : '0'
+    //});
+
+    $('.maincontent').animate({
         'marginLeft' : '0',
         'marginTop' : '0'
-    });
+    }, 500);
+
+    //$("#wrapper").css( 'paddingTop' , '0' );
+    $('#wrapper').animate({ 'padding-top' : '0' }, 500);
 }
 
 function showLeft() {
-    $(".maincontent").css({
-        'marginLeft' : $(".gas-pump").width(),
-        'marginTop' : '5vh'
-    });
+    //$(".maincontent").css({
+    //    'marginLeft' : $(".gas-pump").width(),
+    //    'marginTop' : '5vh'
+    //});
+
+    //$(".wrapper").css( 'paddingTop', '120px' );
+
+
+
+
 
     a = $("#left-nav");
     b = $(".menucats");
     c = $("#top-nav");
     d = $(".categoryname");
+    e = $('#wrapper');
+    f = $('.maincontent');
 
-    a.fadeIn(500);
-    b.fadeIn(500);
-    c.fadeOut(500);
-    d.fadeOut(500);
+    e.animate({ 'padding-top' : '90px' }, 500);
+
+    a.css({
+        'opacity' : '0',
+        'display' : 'inherit'
+    });
+
+    f.animate({
+        'marginLeft' : $(".gas-pump").width(),
+        'marginTop' : '5vh'
+    }, 500);
+
+
+
+
+
+
+    //a.fadeIn(500);      //left-nav
+    //$("#left-nav").delay(500).animate({ 'opacity' : '1' }, 500);
+    a.delay(500).animate({ 'opacity' : '1' }, 500);
+
+    b.fadeIn(500);      //menucats
+    c.fadeOut(500);     //top-nav
+    d.fadeOut(500);     //categoryname
 
 }
 

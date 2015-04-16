@@ -4,37 +4,25 @@ function hideLeft(){
     b = $(".menucats");
     c = $("#top-nav");
     d = $(".categoryname");
+    e = $('#wrapper');
+    f = $('.maincontent');
 
     a.fadeOut(500);
     b.fadeOut(500);
     c.fadeIn(500);
     d.fadeIn(500);
 
-    //$(".maincontent").css({
-    //    'marginLeft' : '0',
-    //    'marginTop' : '0'
-    //});
+    a.css({ 'opacity' : '0' });
 
-    $('.maincontent').animate({
+    f.animate({
         'marginLeft' : '0',
         'marginTop' : '0'
     }, 500);
 
-    //$("#wrapper").css( 'paddingTop' , '0' );
-    $('#wrapper').animate({ 'padding-top' : '0' }, 500);
+    e.animate({ 'padding-top' : '0' }, 500);
 }
 
 function showLeft() {
-    //$(".maincontent").css({
-    //    'marginLeft' : $(".gas-pump").width(),
-    //    'marginTop' : '5vh'
-    //});
-
-    //$(".wrapper").css( 'paddingTop', '120px' );
-
-
-
-
 
     a = $("#left-nav");
     b = $(".menucats");
@@ -45,24 +33,14 @@ function showLeft() {
 
     e.animate({ 'padding-top' : '90px' }, 500);
 
-    a.css({
-        'opacity' : '0',
-        'display' : 'inherit'
-    });
+    a.fadeIn(500); //left-nav
 
-    f.animate({
+    f.animate({     //maincontent
         'marginLeft' : $(".gas-pump").width(),
         'marginTop' : '5vh'
     }, 500);
 
-
-
-
-
-
-    //a.fadeIn(500);      //left-nav
-    //$("#left-nav").delay(500).animate({ 'opacity' : '1' }, 500);
-    a.delay(500).animate({ 'opacity' : '1' }, 500);
+    a.animate({ 'opacity' : '1' }, 500); //left-nav
 
     b.fadeIn(500);      //menucats
     c.fadeOut(500);     //top-nav
@@ -73,8 +51,10 @@ function showLeft() {
 function layoutManager() {
     if ( $(window).width() < $(window).height() * 1.05 ) {
         hideLeft();
+        hideLeft();
     }
     else {
+        showLeft();
         showLeft();
     }
 }
@@ -91,9 +71,11 @@ $(document).ready(function () {
             if (flip == 0) {
                 $(".bulb").attr("fill","#ba0d27");
                 flip = 1;
+                //layoutManager();
             } else {
                 $(".bulb").attr("fill","#FFEA82");
                 flip = 0;
+                //layoutManager();
             }
         },
         3000 );

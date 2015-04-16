@@ -15,7 +15,7 @@
       <h3 class="categoryname"><%= catcount_to_cat(x) %></h3>
       <div id="cat-<%= x %>" class="columns">
         <% @menu_items.where(category: x.to_s).each do |f| %>
-            <div class="menu-item-box hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
+            <div class="menu-item-box shadowed hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
               <div class="itemtext">
                 <p><%= f.name %></p>
               </div>

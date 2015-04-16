@@ -31,9 +31,9 @@ function showLeft() {
     e = $('#wrapper');
     f = $('.maincontent');
 
-    e.animate({ 'padding-top' : '90px' }, 500);
-
-    a.fadeIn(500); //left-nav
+    e.animate({ 'padding-top' : '90px' }, 500);  //wrapper
+    c.fadeOut(500);     //top-nav
+    a.fadeIn(1000);      //left-nav
 
     f.animate({     //maincontent
         'marginLeft' : $(".gas-pump").width(),
@@ -43,7 +43,6 @@ function showLeft() {
     a.animate({ 'opacity' : '1' }, 500); //left-nav
 
     b.fadeIn(500);      //menucats
-    c.fadeOut(500);     //top-nav
     d.fadeOut(500);     //categoryname
 
 }
@@ -51,19 +50,31 @@ function showLeft() {
 function layoutManager() {
     if ( $(window).width() < $(window).height() * 1.05 ) {
         hideLeft();
-        hideLeft();
+        //hideLeft();
     }
     else {
         showLeft();
-        showLeft();
+        //showLeft();
     }
 }
 
+$(window).resize(function() {
+    layoutManager();
+});
 
 $(document).ready(function () {
 
-    //Responsive
-    layoutManager();
+    $('.maincontent').animate({     //maincontent
+        'marginLeft' : $(".gas-pump").width(),
+        'marginTop' : '5vh'
+    }, 500);
+
+    setInterval( function () {
+            layoutManager();
+        },
+        1500 );
+
+
 
     //Flip banner sign lights on and off
     var flip = 0;
@@ -71,11 +82,9 @@ $(document).ready(function () {
             if (flip == 0) {
                 $(".bulb").attr("fill","#ba0d27");
                 flip = 1;
-                //layoutManager();
             } else {
                 $(".bulb").attr("fill","#FFEA82");
                 flip = 0;
-                //layoutManager();
             }
         },
         3000 );
@@ -86,7 +95,8 @@ $(document).ready(function () {
         window.location = "/"
     });
     $(".photos-link").on('click', function(event) {
-        window.location = "/photo"
+        //window.location = "/photo"
+        Turbolinks.visit("/photo")
     });
     $(".about-link").on('click', function(event) {
         window.location = "/about"
@@ -111,8 +121,4 @@ $(document).ready(function () {
         }
     });
     //End auto scroller
-});
-
-$(window).resize(function() {
-    layoutManager();
 });

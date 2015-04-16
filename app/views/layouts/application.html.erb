@@ -30,7 +30,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div id="top-nav">
+  <div id="top-nav" data-turbolinks-permanent>
     <% if @home_banner %>
         <%= render "layouts/bannerTop" %>
     <% else %>
@@ -39,8 +39,9 @@
   </div>
 
   <main role="main" id="primary-content">
-    <div id="left-nav">
-      <% if @home_banner %><%= render "layouts/banner" %>
+    <div id="left-nav" data-turbolinks-permanent>
+      <% if @home_banner %>
+          <%= render "layouts/banner" %>
       <% end %>
     </div>
     <div class="maincontent">

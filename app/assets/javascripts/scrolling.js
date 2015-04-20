@@ -95,8 +95,8 @@ $(document).ready(function () {
         window.location = "/"
     });
     $(".photos-link").on('click', function(event) {
-        //window.location = "/photo"
-        Turbolinks.visit("/photo")
+        window.location = "/photo"
+        //Turbolinks.visit("/photo")
     });
     $(".about-link").on('click', function(event) {
         window.location = "/about"

@@ -17,5 +17,5 @@
 //= require turbolinks
 //= turbolinks_transitions.js
 //= require bootstrap-sprockets
-//= require jquery.scrollTo
+// require jquery.scrollTo
 //= require_tree .

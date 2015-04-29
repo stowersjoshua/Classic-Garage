@@ -41,7 +41,7 @@
           </div>
           <div class="modal-body">
             <img src="<%= g.image.url %>" />
-            <p><%= number_to_currency(g.price/100) %></p>
+            <p><%= number_to_currency(g.price/100) if g.price %></p>
             <p><%= g.description %></p>
           </div>
         </div>

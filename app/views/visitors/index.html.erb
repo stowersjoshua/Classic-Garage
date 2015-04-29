@@ -17,11 +17,11 @@
         <% @menu_items.where(category: x.to_s).each do |f| %>
             <div class="menu-item-box shadowed hvr-shrink" data-toggle="modal" data-target="#<%= "menuitem-" + f.id.to_s %>">
               <div class="itemtext">
-                <p><%= f.name %></p>
+                <p><%= f.name || "N/A" %></p>
               </div>
               <img src="<%= f.image.url %>" />
               <div class="itemtext">
-                <p class="itemdesc"><%= truncate(f.description, :length => 80, :separator => ' ') %></p>
+                <p class="itemdesc"><%= truncate(f.description, :length => 80, :separator => ' ') || "N/A" %></p>
               </div>
             </div>
         <% end %>
@@ -40,9 +40,9 @@
             <h4 class="modal-title" id="myModalLabel"><%= g.name %></h4>
           </div>
           <div class="modal-body">
-            <img src="<%= g.image.url %>" />
-            <p><%= number_to_currency(g.price/100) %></p>
-            <p><%= g.description %></p>
+            <img src="<%= g.image.url || "N/A" %>" />
+            <p><%= number_to_currency(g.price/100) || "N/A" %></p>
+            <p><%= g.description || "N/A" %></p>
           </div>
         </div>
       </div>

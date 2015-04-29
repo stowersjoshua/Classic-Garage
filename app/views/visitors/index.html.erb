@@ -40,9 +40,11 @@
             <h4 class="modal-title" id="myModalLabel"><%= g.name %></h4>
           </div>
           <div class="modal-body">
-            <img src="<%= g.image.url || "N/A" %>" />
-            <p><%= number_to_currency(g.price/100) || "N/A" %></p>
-            <p><%= g.description || "N/A" %></p>
+
+            <img src="<%= g.image.url %>" />
+            <p><%= number_to_currency(g.price/100) if g.price %></p>
+            <p><%= g.description %></p>
+
           </div>
         </div>
       </div>

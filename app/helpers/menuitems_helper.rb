@@ -1,6 +1,6 @@
 module MenuitemsHelper
   def catcount_to_cat(catcount)
-    hash = { 1 => "Entrees", 2 => "Sides", 3 => "Desserts", 4 => "Appetizers", 5 => "Other" }
+    hash = { 1 => "Extras", 2 => "Entrees", 3 => "Specials", 4 => "Desserts", 5 => "Drinks" }
     hash[catcount]
   end
 end

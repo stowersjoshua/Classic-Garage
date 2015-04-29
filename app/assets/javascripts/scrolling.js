@@ -80,10 +80,10 @@ $(document).ready(function () {
     var flip = 0;
     setInterval( function () {
             if (flip == 0) {
-                $(".bulb").attr("fill","#ba0d27");
+                $(".bulb").attr("fill","#ba0d27");      //Lights off...
                 flip = 1;
             } else {
-                $(".bulb").attr("fill","#FFEA82");
+                $(".bulb").attr("fill","#FFEA82");      //Lights on...
                 flip = 0;
             }
         },

@@ -1,6 +1,7 @@
 class MenuitemsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_menuitem, only: [:show, :edit, :update, :destroy]
-
+  before_filter :admin_only
   respond_to :html
 
   def index
@@ -48,4 +49,18 @@ class MenuitemsController < ApplicationController
     def menuitem_params
       params.require(:menuitem).permit(:name, :category, :description, :price, :order, :image)
     end
+
+  def admin_only
+    unless current_user.admin?
+      redirect_to :back, :alert => "Access denied."
+    end
+  end
+
+  def secure_params
+    params.require(:user).permit(:role)
+  end
+
 end
+
+
+

@@ -1,6 +1,8 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_user!, :except => :public
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-
+  before_filter :admin_only, :except => :public
+  #before_filter :admin_only, :only => :show
   respond_to :html
 
   def public
@@ -53,4 +55,15 @@ class PhotosController < ApplicationController
     def photo_params
       params.require(:photo).permit(:name, :user, :order, :approved, :image)
     end
+
+    def admin_only
+      unless current_user.admin?
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
+
+    def secure_params
+      params.require(:user).permit(:role)
+    end
+
 end

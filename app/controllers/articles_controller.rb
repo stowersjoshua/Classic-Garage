@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :authenticate_user!, :except => :index
+  before_filter :admin_only, :except => :index
   def index
     @home_banner = true
     @page_name = "Car Show"
@@ -24,6 +26,12 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    @user = User.find(params[:id])
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
   end
 
   def update

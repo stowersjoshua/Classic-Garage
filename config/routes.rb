@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   #Admin
   get "admin" => "admin#approve_photos"
   get "admin/photos" => "admin#approve_photos"
-  # Create new admin page for articles
+  get "admin/post" => "articles#new"
   get "admin/users" => "users#index"
   get "admin/menu" => "menuitems#index"
 

@@ -63,6 +63,7 @@ $(window).resize(function() {
 });
 
 $(document).ready(function () {
+    layoutManager();
 
     $('.maincontent').animate({     //maincontent
         'marginLeft' : $(".gas-pump").width(),
@@ -107,6 +108,21 @@ $(document).ready(function () {
     $(".contact-link").on('click', function(event) {
         window.location = "/contact"
     });
+
+    //Admin banner links
+    $(".admin-users-link").on('click', function(event) {
+        window.location = "/admin/users"
+    });
+    $(".admin-carshow-link").on('click', function(event) {
+        window.location = "/admin/post"
+    });
+    $(".admin-menu-link").on('click', function(event) {
+        window.location = "/admin/post"
+    });
+    $(".admin-photo-link").on('click', function(event) {
+        window.location = "/admin/photos"
+    });
+
     //End banner links
 
     //Auto scroller

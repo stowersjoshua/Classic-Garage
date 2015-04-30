@@ -1,31 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="adminpage">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @menuitem.name %>
-</p>
-<p>
-  <strong>Category:</strong>
-  <%= @menuitem.category %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @menuitem.name %>
+    </p>
+    <p>
+      <strong>Category:</strong>
+      <%= @menuitem.category %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @menuitem.description %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @menuitem.description %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @menuitem.price %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <%= @menuitem.price %>
+    </p>
 
-<p>
-  <strong>Order:</strong>
-  <%= @menuitem.order %>
-</p>
-<p>
-  Photo:
-  <%= image_tag @menuitem.image.url %>
-</p>
-<%= link_to 'Edit', edit_menuitem_path(@menuitem) %> |
-<%= link_to 'Back', menuitems_path %>
+    <p>
+      <strong>Order:</strong>
+      <%= @menuitem.order %>
+    </p>
+    <p>
+      Photo:
+      <%= image_tag @menuitem.image.url %>
+    </p>
+    <%= link_to 'Edit', edit_menuitem_path(@menuitem) %> |
+    <%= link_to 'Back', menuitems_path %>
+</div>

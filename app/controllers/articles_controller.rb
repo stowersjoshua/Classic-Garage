@@ -48,4 +48,15 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body)
   end
+
+  def admin_only
+    unless current_user.admin?
+      redirect_to :back, :alert => "Access denied."
+    end
+  end
+
+  def secure_params
+    params.require(:user).permit(:role)
+  end
+
 end

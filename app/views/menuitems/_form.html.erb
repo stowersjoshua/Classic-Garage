@@ -1,4 +1,4 @@
-<%= form_for(@menuitem) do |f| %>
+<%= bootstrap_form_for(@menuitem) do |f| %>
   <% if @menuitem.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@menuitem.errors.count, "error") %> prohibited this menuitem from being saved:</h2>
@@ -12,24 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%#= f.label :category %><br>
-    <%#w= f.text_field :category %>
     <%= f.select :category, [["Extras", 1], ["Entrees", 2], ["Specials", 3], ["Desserts", 4], ["Drinks", 5]], {label: "Category"}, {class: "selectpicker"} %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :order %><br>
     <%= f.number_field :order %>
   </div>
   <div class="field">

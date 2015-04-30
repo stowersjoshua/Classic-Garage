@@ -117,7 +117,7 @@ $(document).ready(function () {
         window.location = "/admin/post"
     });
     $(".admin-menu-link").on('click', function(event) {
-        window.location = "/admin/post"
+        window.location = "/admin/menu"
     });
     $(".admin-photo-link").on('click', function(event) {
         window.location = "/admin/photos"

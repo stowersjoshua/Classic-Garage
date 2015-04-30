@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
     #@photos = Photo.approved_items
     @home_banner  = true
     @page_name = "Photos"
-    @photos = Photo.all
+    @photos = Photo.approved_items.order(order: :asc)
     @photo = Photo.new
   end
 

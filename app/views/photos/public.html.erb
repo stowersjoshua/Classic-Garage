@@ -9,7 +9,7 @@
       <div>
         <% @photos.each do |f| %>
             <a href="<%= f.image.url %>"></a>
-            <img style="height: 300px;" src="<%= f.image.url %>" alt="<%= f.name %>" />
+            <img src="<%= f.image.url %>" alt="<%= f.name %>" />
         <% end %>
       </div>
     </div>
@@ -71,8 +71,12 @@
     //Page specific, do not put into a .JS file
     Galleria.loadTheme('galleria.classic.js');
     Galleria.run('#galleria');
+
+    //$("#galleria").css('width', '100%');
+
     //This page should have a black background. =)
     $(document).ready(function () {
         $(".bg").css("background-color","black");
     });
+
 </script>

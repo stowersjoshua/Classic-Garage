@@ -1,2 +1,17 @@
-<h3> New Article</h3>
-<%= render "form" %>
+<div class="adminpage">
+    <h3> New Article</h3>
+    <%= render "form" %>
+    <hr />
+    <h3> Previous Articles</h3>
+    <div class="articlewrapper">
+      <% @articles.each do |article| %>
+          <div class="well blog-box shadowed">
+            <span class="head-left"><%= article.title.html_safe %></span><span class="head-right"><%= article.created_at.strftime("%B %d, %Y") %></span>
+            <div class="clearfix"></div>
+            <p><%= article.body.html_safe %></p>
+            <%= link_to "Edit Article", edit_article_path(article) %>
+            <div class="clearfix"></div>
+          </div>
+      <% end %>
+    </div>
+</div>

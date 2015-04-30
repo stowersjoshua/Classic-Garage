@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @articles = Article.order("created_at DESC")
   end
 
   def create

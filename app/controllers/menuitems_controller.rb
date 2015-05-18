@@ -32,8 +32,10 @@ class MenuitemsController < ApplicationController
   end
 
   def update
-    @menuitem.update(menuitem_params)
-    respond_with(@menuitem)
+    redirect_to menuitems_path 
+    
+    #@menuitem.update(menuitem_params)
+    #respond_with(@menuitem)
   end
 
   def destroy

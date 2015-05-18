@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
-  before_filter :authenticate_user!, :except => :public
+  before_filter :authenticate_user!, except: [ :public, :create ]
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  before_filter :admin_only, :except => :public
+  before_filter :admin_only, except: [ :public, :create ]
   #before_filter :admin_only, :only => :show
   respond_to :html
 
@@ -39,12 +39,14 @@ class PhotosController < ApplicationController
 
   def update
     flash[:notice] = 'Photo was successfully updated.' if @photo.update(photo_params)
-    respond_with(@photo)
+    #respond_with(@photo)
+    redirect_to "/admin/photos"
   end
 
   def destroy
     @photo.destroy
-    respond_with(@photo)
+    #respond_with(@photo)
+    redirect_to "/admin/photos"
   end
 
   private
